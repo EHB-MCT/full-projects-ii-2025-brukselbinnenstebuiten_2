@@ -35,7 +35,7 @@ button:hover {
 	padding: 16px;
 }
 
-.button_list {
+.button_list, .dropdown_list {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
