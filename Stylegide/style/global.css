@@ -1,0 +1,153 @@
+@import url(colors.css);
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.color_list_item {
+    padding: 16px;
+    margin: 16px;
+    background-color: #9d4c36;
+    width: 106px;
+    border-radius: 16px;
+}
+
+nav {
+    background-color: var(--nav);
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    background-color: var(--btn);
+    border: 1px solid black;
+    border-radius: 1000px;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+    color: var(--btn);
+    border-color: var(--btn);
+}
+
+.button_list_item {
+    padding: 16px;
+}
+
+.button_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.line {
+    padding: 1px;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0.1) 0%, rgb(176, 85, 61) 50%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: -75px;
+    padding-left: 16px;
+}
+
+.icon {
+    width: 50px;
+    padding: 8px;
+    filter: brightness(0%);
+}
+
+.icon_flag {
+    width: 50px;
+    padding: 8px;
+}
+
+.main_navigation {
+    padding: 60px;
+    padding-top: 80px;
+    width: 20%;
+}
+
+.main_section {
+    padding: 60px;
+    background-color: #5c3023;
+}
+
+.primary {
+    background-color: var(--primary);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.nav {
+    background-color: var(--nav);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.btn {
+    background-color: var(--btn);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.btn-hover {
+    background-color: var(--btn-hover);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.btn-txt {
+    background-color: var(--btn-txt);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.special-txt {
+    background-color: var(--special-txt);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.txt {
+    background-color: var(--txt);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.disabled-txt {
+    background-color: var(--disabled-txt);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.design-bar {
+    background-color: var(--design-bar);
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 16px;
+}
+
+.color_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
