@@ -177,7 +177,7 @@ button:hover {
 		margin: 0.4rem 0;
 	}
 }
-.input_fields:placeholder {
+.time_input::placeholder {
 	color: #777;
 	opacity: 1;
 }
