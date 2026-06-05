@@ -25,6 +25,12 @@ p {
 	padding-top: 16px;
 }
 
+.button_text, .dropdown, .dropbtn {
+    padding: 8px;
+    font-family: "ocr-b-std", monospace;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
 .button_text {
 	padding: 8px;
 	font-family: "ocr-b-std", monospace;
