@@ -157,7 +157,7 @@ button:hover {
 	flex-wrap: wrap;
 }
 
-.input_fields {
+.input_fields_time {
 	label {
 		display: block;
 	}
@@ -180,6 +180,33 @@ button:hover {
 .time_input::placeholder {
 	color: #777;
 	opacity: 1;
+}
+
+.search_input::placeholder {
+	padding-left: 16px;
+	color: #777;
+	opacity: 1;
+}
+
+.input_fields_search {
+	label {
+		display: block;
+	}
+
+	input,
+	label {
+		width: 300px;
+		height: 30px;
+		border: none;
+		border-radius: 25px;
+		background: #d26d4a;
+
+		text-align: left;
+		font-size: 14px;
+		color: black;
+
+		margin: 0.4rem 0;
+	}
 }
 
 .dropdown {
