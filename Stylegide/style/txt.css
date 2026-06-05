@@ -1,41 +1,63 @@
 @import url("https://use.typekit.net/bmq3fwl.css");
 
 body {
-    font-family: sans-serif;
-    background-color: black;
+	font-family: sans-serif;
+	background-color: black;
 }
 
 h1 {
-    padding-top: 10px;
-    font-size: 50px;
+	padding-top: 10px;
+	font-size: 50px;
 }
 
-h2 { 
-    color: white;
-    font-size: 30px;
+h2 {
+	color: white;
+	font-size: 30px;
 }
 
 h3 {
-    padding: 8px;
-    color: white;
-    font-size: 20px;
+	padding: 8px;
+	color: white;
+	font-size: 20px;
 }
 
 p {
-    padding-top: 16px;
+	padding-top: 16px;
 }
 
-.button_text, .dropdown, .dropbtn {
-    padding: 8px;
-    font-family: "ocr-b-std", monospace;
-    font-size: 20px;
-    font-weight: 400;
-    font-style: normal;
+.button_text,
+.dropdown,
+.dropbtn {
+	padding: 8px;
+	font-family: "ocr-b-std", monospace;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.button_text {
+	padding: 8px;
+	font-family: "ocr-b-std", monospace;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .smaller_button {
-    font-family: "ocr-b-std", monospace;
-    font-weight: 400;
-    padding: 8px;
-    font-size: 16px;
+	font-family: "ocr-b-std", monospace;
+	font-weight: 400;
+	padding: 8px;
+	font-size: 16px;
+}
+
+.font {
+	padding: 8px;
+	font-family: "ocr-b-std", monospace;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.font_txt {
+	padding: 8px;
 }
