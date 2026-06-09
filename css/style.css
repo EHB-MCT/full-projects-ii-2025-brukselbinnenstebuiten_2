@@ -66,6 +66,16 @@ main {
     justify-content: space-around;
 }
 
+button:hover {
+    background-color: var(--primary);
+    border-color: var(--btn);
+    color: var(--btn);
+}
+
+button:hover h3, button:hover h2 {
+    color: var(--btn);
+}
+
 @media (width <= 700px){
 	.inverted_bar {
         display: none;
@@ -135,6 +145,10 @@ main {
     }
 
     .underlining_collection {
-        top: 255px;
+        top: 263px;
+    }
+
+    nav ul {
+        row-gap: 8px;
     }
 }
