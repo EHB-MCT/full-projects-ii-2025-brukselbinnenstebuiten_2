@@ -1,0 +1,37 @@
+@import url(colors.css);
+
+footer {
+    background-color: var(--btn);
+    text-align: center;
+}
+
+footer p {
+    padding-bottom: 16px;
+}
+
+.footer_row p {
+    padding: 0;
+}
+
+.footer_icon {
+    width: 20px;
+}
+
+.footer_center_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 16px;
+    padding-bottom: 32px;
+}
+
+.footer_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer_social img {
+    padding-top: 32px;
+    width: 60px;
+}

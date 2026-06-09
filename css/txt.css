@@ -1,0 +1,25 @@
+@import url("https://use.typekit.net/bmq3fwl.css");
+
+body {
+	font-family: "ocr-b-std", monospace;
+	background-color: black;
+}
+
+.random_image_text {
+    color: var(--special-txt);
+	font-size: 12px;
+	writing-mode: sideways-lr;
+	max-height: 300px;
+}
+
+li:has(.random_image_text) {
+	display: flex;
+	align-items: end;
+}
+
+.inverted_bar_text {
+	color: var(--special-txt);
+	font-size: 200%;
+	transform: scale(-1, -1);
+	padding-bottom: 4px;
+}

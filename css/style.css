@@ -1,1 +1,65 @@
+@import url(reset.css);
 @import url(colors.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(txt.css);
+
+button {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 9px 32px;
+    border: 1px solid var(--primary);
+    border-radius: 1000px;
+    background-color: var(--btn);
+}
+
+main {
+    padding: 16px;
+    padding-top: 50px;
+}
+
+.right_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    column-gap: 8px;
+    padding-right: 16px;
+}
+
+.main_row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    padding: 16px;
+}
+
+.main_row img {
+    width: 100%;
+}
+
+.random_image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.random_image_container {
+    overflow: hidden;
+    width: 90%;
+    margin-right: -32px;
+}
+
+.random_image_list {
+    max-height: 700px;
+    padding-bottom: 16px;
+}
+
+.inverted_bar {
+    background-color: var(--design-bar);
+    margin: 16px;
+    margin-top: -16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
