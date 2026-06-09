@@ -18,8 +18,11 @@ li:has(.random_image_text) {
 }
 
 .inverted_bar_text {
-	color: var(--special-txt);
 	font-size: 200%;
 	transform: scale(-1, -1);
 	padding-bottom: 4px;
+}
+
+.inverted_bar_text h2 {
+	color: var(--special-txt);
 }

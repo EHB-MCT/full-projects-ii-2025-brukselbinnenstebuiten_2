@@ -10,6 +10,8 @@
 <body>
 	<header>
 		<a href="index.html" class="logo"><img src="Assets/Image/BrukselBeeldenBank_logo.png" alt="Logo"></a>
+		<input hidden type="checkbox" id="menu_toggle">
+		<label hidden for="menu_toggle" class="menu_icon">☰</label>
 		<nav>
 			<ul>
 				<li>
@@ -19,9 +21,11 @@
 					</button>
 				</li>
 				<li>
-					<button>
-						<h2>Bekijk collectie</h2>
-					</button>
+					<a href="Pages/Collection.html">
+						<button>
+							<h2>Bekijk collectie</h2>
+						</button>
+					</a>
 				</li>
 				<li class="searchbar">
 					<img src="Assets/SVG/Search.svg" alt="Search icon">
@@ -155,7 +159,7 @@
 		</ul>
 	</main>
 	<footer>
-		<ul class="footer_center_row">
+		<ul class="footer_center_row_social">
 			<li class="footer_social"><img src="Assets/SVG/facebook-svgrepo-com.svg" alt="Facebook"></li>
 			<li class="footer_social"><img src="Assets/SVG/SVG Repo Instagram.svg" alt="Instagram icon"></li>
 			<li class="footer_social"><img src="Assets/SVG/SVG Repo Twitter.svg" alt="Twitter icon"></li>

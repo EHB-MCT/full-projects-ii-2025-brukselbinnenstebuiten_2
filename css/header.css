@@ -20,9 +20,10 @@ nav ul {
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    height: 100%;
+    flex-wrap: wrap;
+    height: calc(100% - 32px);
     column-gap: 8px;
-    padding-right: 16px;
+    padding: 16px;
 }
 
 .searchbar input {
@@ -56,3 +57,9 @@ nav ul {
 .logo img {
     width: 150px;
 }
+
+.underlining_collection {
+    width: 200px;
+    height: 14px;
+}
+
