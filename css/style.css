@@ -66,6 +66,17 @@ main {
     justify-content: space-around;
 }
 
+#filtered_image_container img {
+    width: 100%;
+}
+
+ul:has(#filtered_image_container) {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
 button:hover {
     background-color: var(--primary);
     border-color: var(--btn);

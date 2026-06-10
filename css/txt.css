@@ -26,3 +26,8 @@ li:has(.random_image_text) {
 .inverted_bar_text h2 {
 	color: var(--special-txt);
 }
+
+#filtered_image_container p {
+    color: var(--special-txt);
+	font-size: 12px;
+}
