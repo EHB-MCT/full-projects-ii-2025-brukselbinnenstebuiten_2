@@ -59,3 +59,16 @@ li:has(.random_image_text) {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 16px;
 }
+
+.typ {
+	background-color: var(--btn);
+	border: 2px solid var(--btn);
+}
+
+.checkbox {
+	width: 25px;
+	height: 25px;
+	background-color: var(--btn);
+	border: 2px solid var(--btn);
+	border-radius: 3px;
+}
