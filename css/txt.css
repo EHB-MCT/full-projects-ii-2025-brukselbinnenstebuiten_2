@@ -72,7 +72,15 @@ li:has(.random_image_text) {
 .checkbox {
 	width: 25px;
 	height: 25px;
+	padding: 0 1.5px;
 	background-color: var(--btn);
 	border: 2px solid var(--btn);
 	border-radius: 3px;
+	align-content: center;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✕";
+    font-size: 22px;
+	justify-content: center;
 }

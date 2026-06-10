@@ -82,6 +82,24 @@ button:has(.sort_icon) {
     padding: 4px;
 }
 
+.top_bar {
+    justify-content: end;
+    padding-right: 16px;
+}
+
+main:has(.top_bar) {
+    padding-top: 16px;
+}
+
+.top_bar .searchbar {
+    width: 100%;
+    margin-left: 15%;
+}
+
+.top_bar .searchbar input {
+    width: 100%;
+}
+
 #filtered_image_container img {
     width: 100%;
 }
