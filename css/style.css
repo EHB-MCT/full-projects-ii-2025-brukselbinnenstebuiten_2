@@ -49,7 +49,6 @@ main {
 .random_image_container {
     overflow: hidden;
     width: 90%;
-    margin-right: -32px;
 }
 
 .random_image_list {
@@ -66,8 +65,18 @@ main {
     justify-content: space-around;
 }
 
-#filtered_image_container:hover #filtered_image_txt {
-    display: block;
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.sort_icon {
+	filter: brightness(0%);
+    width: 24px;
+}
+
+button:has(.sort_icon) {
+    padding: 4px;
 }
 
 #filtered_image_container img {
@@ -79,6 +88,14 @@ ul:has(#filtered_image_container) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 16px;
+}
+
+#filtered_image_container:hover #filtered_image_txt {
+    display: block;
+}
+
+button:hover .sort_icon {
+    filter: contrast(0%) brightness(200%);
 }
 
 button:hover {

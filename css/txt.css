@@ -31,3 +31,11 @@ li:has(.random_image_text) {
     color: var(--special-txt);
 	font-size: 12px;
 }
+
+.sorteren_dropdown {
+	padding: 8px;
+}
+
+.dropdown_arrow {
+	transform: rotate(90deg);
+}

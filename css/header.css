@@ -9,6 +9,8 @@ header {
 
 input.searchbar {
     padding-left: 0px;
+    padding-right: 0;
+    border-radius: 0;
 }
 
 nav {
@@ -63,11 +65,6 @@ nav ul {
     height: 14px;
 }
 
-input.searchbar {
-    padding-right: 0;
-    border-radius: 0;
-}
-
 .flag_list {
     align-items: center;
     padding: 0;
@@ -77,3 +74,6 @@ input.searchbar {
     height: 30px;
 }
 
+.searchbar input::placeholder {
+    color: var(--primary);
+}

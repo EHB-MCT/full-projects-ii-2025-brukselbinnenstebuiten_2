@@ -49,19 +49,31 @@
 	</header>
 	<main>
 		<section>
-			<ul>
+			<ul class="row">
 				<li class="searchbar">
 					<img src="../Assets/SVG/Search.svg" alt="Search icon">
 					<input type="text" placeholder="Zoeken">
 				</li>
+				<li>
+					<button class="sorteren_dropdown row">
+						<h2>Sorteren</h2>
+						<h2 class="dropdown_arrow">></h2>
+					</button>
+				</li>
+				<li>
+					<button>
+						<img class="sort_icon" src="../Assets/SVG/sort-from-top-to-bottom-svgrepo-com.svg" alt="Filter">
+						<img hidden class="sort_icon" src="../Assets/SVG/sort-from-bottom-to-top-svgrepo-com.svg" alt="Filter-inverted">
+					</button>
+				</li>
 			</ul>
 			<ul class="filter_container">
-
+				
 			</ul>
 		</section>
         <ul>
-            <li id="filtered_image_container">
-                <img id="filtered_image" src="../Assets/Image/Test_image.jpg" alt="Filtered image">
+			<li id="filtered_image_container">
+				<img id="filtered_image" src="../Assets/Image/Test_image.jpg" alt="Filtered image">
 				<p id="filtered_image_txt" hidden>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, asperiores?</p>
         </ul>
 	</main>
