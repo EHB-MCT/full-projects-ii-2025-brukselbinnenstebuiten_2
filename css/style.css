@@ -85,6 +85,7 @@ button:has(.sort_icon) {
 .top_bar {
     justify-content: end;
     padding-right: 16px;
+    margin-left: 15%;
 }
 
 main:has(.top_bar) {
@@ -93,7 +94,6 @@ main:has(.top_bar) {
 
 .top_bar .searchbar {
     width: 100%;
-    margin-left: 15%;
 }
 
 .top_bar .searchbar input {
@@ -109,6 +109,11 @@ ul:has(#filtered_image_container) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 16px;
+}
+
+ul.row {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 #filtered_image_container:hover #filtered_image_txt {
