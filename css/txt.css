@@ -32,6 +32,14 @@ li:has(.random_image_text) {
 	font-size: 12px;
 }
 
+.sorteren_dropdown {
+	padding: 8px;
+}
+
+.dropdown_arrow {
+	transform: rotate(90deg);
+}
+
 .filter_container h2,
 .filter_container p {
 	color: var(--btn);
