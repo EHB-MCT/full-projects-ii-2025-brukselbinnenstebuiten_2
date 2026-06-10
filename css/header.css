@@ -25,6 +25,7 @@ nav ul {
 	height: calc(100% - 32px);
 	column-gap: 8px;
 	padding: 16px;
+    padding-right: 32px;
 }
 
 .searchbar input {
