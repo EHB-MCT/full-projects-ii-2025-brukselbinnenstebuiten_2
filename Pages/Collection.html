@@ -1,88 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bruksel Beelden Bank - Home</title>
-	<link rel="icon" type="image/x-icon" href="Assets/Image/BrukselBeeldenBank_logo.png">
-	<link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-	<header>
-		<a href="../index.html" class="logo"><img src="../Assets/Image/BrukselBeeldenBank_logo.png" alt="Logo"></a>
-		<input hidden type="checkbox" id="menu_toggle">
-		<label hidden for="menu_toggle" class="menu_icon">☰</label>
-		<nav>
-			<ul>
-				<li>
-					<a href="../index.html">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bruksel Beelden Bank - Home</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="Assets/Image/BrukselBeeldenBank_logo.png"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<header>
+			<a href="../index.html" class="logo"
+				><img src="../Assets/Image/BrukselBeeldenBank_logo.png" alt="Logo"
+			/></a>
+			<input hidden type="checkbox" id="menu_toggle" />
+			<label hidden for="menu_toggle" class="menu_icon">☰</label>
+			<nav>
+				<ul>
+					<li>
+						<a href="../index.html">
+							<button>
+								<h2>Home</h2>
+							</button>
+						</a>
+					</li>
+					<li>
 						<button>
-							<h2>Home</h2>
+							<h2>Bekijk collectie</h2>
+							<img
+								src="../Assets/Image/Underlining_collection.png"
+								alt="Underlining"
+								class="underlining underlining_collection"
+							/>
 						</button>
-					</a>
-				</li>
-				<li>
-					<button>
-						<h2>Bekijk collectie</h2>
-						<img src="../Assets/Image/Underlining_collection.png" alt="Underlining" class="underlining underlining_collection">
-					</button>
-				</li>
-				<li class="searchbar">
-					<img src="../Assets/SVG/Search.svg" alt="Search icon">
-					<input class="searchbar" type="text" placeholder="Zoeken">
-				</li>
-				<li>
-					<ul class="flag_list">
+					</li>
+					<li class="searchbar">
+						<img src="../Assets/SVG/Search.svg" alt="Search icon" />
+						<input class="searchbar" type="text" placeholder="Zoeken" />
+					</li>
+					<li>
+						<ul class="flag_list">
+							<li>
+								<img
+									class="flag"
+									src="../Assets/SVG/flag-be-svgrepo-com.svg"
+									alt="Be flag icon"
+								/>
+							</li>
+							<li>
+								<img
+									class="flag"
+									src="../Assets/SVG/flag-wf-svgrepo-com.svg"
+									alt="Fr flag icon"
+								/>
+							</li>
+							<li>
+								<img
+									class="flag"
+									src="../Assets/SVG/flag-gb-svgrepo-com.svg"
+									alt="En flag icon"
+								/>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<ul class="right_row">
+					<li class="searchbar">
+						<img src="../Assets/SVG/Search.svg" alt="Search icon" />
+						<input type="text" placeholder="Zoeken" />
+					</li>
+				</ul>
+				<ul class="filter_container">
+					<h2>filter</h2>
+					<ul class="filter_row">
 						<li>
-							<img class="flag" src="../Assets/SVG/flag-be-svgrepo-com.svg" alt="Be flag icon">
+							<p>locaities</p>
 						</li>
-						<li>
-							<img class="flag" src="../Assets/SVG/flag-wf-svgrepo-com.svg" alt="Fr flag icon">
+						<li class="row">
+							<p>Datum</p>
+							<input type="text" />
+							<p>tot</p>
+							<input type="text" />
 						</li>
-						<li>
-							<img class="flag" src="../Assets/SVG/flag-gb-svgrepo-com.svg" alt="En flag icon">
-						</li>
+						<li><p>Toon foto's zonder datum</p></li>
+						<li><p>Toon foto's zonder collectie</p></li>
 					</ul>
+				</ul>
+			</section>
+			<ul>
+				<li id="filtered_image_container">
+					<img
+						id="filtered_image"
+						src="../Assets/Image/Test_image.jpg"
+						alt="Filtered image"
+					/>
+					<p id="filtered_image_txt">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+						asperiores?
+					</p>
 				</li>
 			</ul>
-		</nav>
-	</header>
-	<main>
-		<section>
-			<ul class="right_row">
-				<li class="searchbar">
-					<img src="../Assets/SVG/Search.svg" alt="Search icon">
-					<input type="text" placeholder="Zoeken">
+		</main>
+		<footer>
+			<ul class="footer_center_row_social">
+				<li class="footer_social">
+					<img src="../Assets/SVG/facebook-svgrepo-com.svg" alt="Facebook" />
+				</li>
+				<li class="footer_social">
+					<img
+						src="../Assets/SVG/SVG Repo Instagram.svg"
+						alt="Instagram icon"
+					/>
+				</li>
+				<li class="footer_social">
+					<img src="../Assets/SVG/SVG Repo Twitter.svg" alt="Twitter icon" />
 				</li>
 			</ul>
-			<ul class="filter_container">
-
+			<p>
+				Heeft u nog vragen? U bent altijd welkom op locatie voor meer
+				informatie.
+			</p>
+			<p>Brukselbinnenstebuiten, Hopstraat 47 (1), 1000 Brussel (België)</p>
+			<ul class="footer_center_row">
+				<li class="footer_row">
+					<img
+						class="footer_icon"
+						src="../Assets/SVG/telephone-svgrepo-com.svg"
+						alt="Telephone icon"
+					/>
+					<p>+00 32 2 218 38 78</p>
+				</li>
+				<li class="footer_row">
+					<img
+						class="footer_icon"
+						src="../Assets/SVG/mail-alt-svgrepo-com.svg"
+						alt="Email icon"
+					/>
+					<p>​onthaal@brukselbinnenstebuiten.be​</p>
+				</li>
 			</ul>
-		</section>
-        <ul>
-            <li id="filtered_image_container">
-                <img id="filtered_image" src="../Assets/Image/Test_image.jpg" alt="Filtered image">
-				<p id="filtered_image_txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, asperiores?</p>
-        </ul>
-	</main>
-	<footer>
-		<ul class="footer_center_row_social">
-			<li class="footer_social"><img src="../Assets/SVG/facebook-svgrepo-com.svg" alt="Facebook"></li>
-			<li class="footer_social"><img src="../Assets/SVG/SVG Repo Instagram.svg" alt="Instagram icon"></li>
-			<li class="footer_social"><img src="../Assets/SVG/SVG Repo Twitter.svg" alt="Twitter icon"></li>
-		</ul>
-		<p>Heeft u nog vragen? U bent altijd welkom op locatie voor meer informatie.</p>
-		<p>Brukselbinnenstebuiten, Hopstraat 47 (1), 1000 Brussel (België)</p>
-		<ul class="footer_center_row">
-			<li class="footer_row">
-				<img class="footer_icon" src="../Assets/SVG/telephone-svgrepo-com.svg" alt="Telephone icon">
-				<p>+00 32 2 218 38 78</p>
-			</li>
-			<li class="footer_row">
-				<img class="footer_icon" src="../Assets/SVG/mail-alt-svgrepo-com.svg" alt="Email icon">
-				<p>​onthaal@brukselbinnenstebuiten.be​</p>
-			</li>
-		</ul>
-	</footer>
-</body>
+		</footer>
+	</body>
 </html>

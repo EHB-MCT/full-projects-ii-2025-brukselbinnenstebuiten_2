@@ -6,7 +6,7 @@ body {
 }
 
 .random_image_text {
-    color: var(--special-txt);
+	color: var(--special-txt);
 	font-size: 12px;
 	writing-mode: sideways-lr;
 	max-height: 300px;
@@ -28,6 +28,26 @@ li:has(.random_image_text) {
 }
 
 #filtered_image_container p {
-    color: var(--special-txt);
+	color: var(--special-txt);
 	font-size: 12px;
+}
+
+.filter_container h2,
+.filter_container p {
+	color: var(--btn);
+}
+
+.filter_container {
+	border: 2px solid var(--btn);
+	border-radius: 20px;
+	padding: 25px;
+	width: 90%;
+	margin: auto;
+}
+
+.filter_row {
+	padding: 16px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
 }
