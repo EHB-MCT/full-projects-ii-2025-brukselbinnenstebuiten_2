@@ -66,6 +66,10 @@ main {
     justify-content: space-around;
 }
 
+#filtered_image_container:hover #filtered_image_txt {
+    display: block;
+}
+
 #filtered_image_container img {
     width: 100%;
 }
