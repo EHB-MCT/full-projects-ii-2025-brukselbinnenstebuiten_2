@@ -24,7 +24,7 @@ li:has(.random_image_text) {
 }
 
 .inverted_bar_text h2 {
-	color: var(--special-txt);
+	color: var(--inverted);
 }
 
 #filtered_image_container p {
@@ -41,7 +41,8 @@ li:has(.random_image_text) {
 }
 
 .filter_container h2,
-.filter_container p {
+.filter_container p,
+.filter_container label {
 	color: var(--btn);
 }
 
@@ -90,4 +91,8 @@ input[type="checkbox"]:checked::after {
     content: "✕";
     font-size: 22px;
 	justify-content: center;
+}
+
+input::placeholder {
+	color: var(--disabled-txt);
 }

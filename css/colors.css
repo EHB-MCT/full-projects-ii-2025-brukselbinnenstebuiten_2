@@ -6,7 +6,8 @@
     --btn-txt: #000;
     --special-txt: #fff;
     --txt: #b0553d;
-    --disabled-txt: #626262;
+    --disabled-txt: #a0a0a0;
+    --inverted:#626262;
     --design-bar: #231818;
     --unordered: #CA6448;
 }

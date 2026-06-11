@@ -70,13 +70,6 @@ select {
     box-sizing: border-box;
 }
 
-button:disabled,
-input:disabled,
-textarea:disabled,
-select:disabled {
-    cursor: default;
-}
-
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
@@ -96,6 +89,10 @@ input[type="number"] {
 
 textarea {
     resize: vertical;
+}
+
+button {
+    cursor: pointer;
 }
 
 fieldset {

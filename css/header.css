@@ -176,3 +176,27 @@ nav ul {
 	width: 20px;
 	filter: brightness(0);
 }
+
+.beeldbank_scroll{
+	margin-top: auto;
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+    justify-content: center;
+}
+
+li.beeldbank_scroll {
+	margin: 0;
+}
+
+li.beeldbank_scroll button {
+	height: 100%;
+	padding: 0;
+	width: 45px;
+	display: flex;
+	justify-content: center;
+}
+
+li.beeldbank_scroll button:hover p {
+	color: var(--btn);
+}
