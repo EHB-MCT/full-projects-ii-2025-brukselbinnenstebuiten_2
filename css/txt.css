@@ -59,6 +59,14 @@ li:has(.random_image_text) {
 	gap: 16px;
 }
 
+.loco-dropdown h2{
+	color: var(--primary);
+}
+
+#dropdown-grijs{
+	color: var(--disabled-txt);
+}
+
 .typ {
 	width: 75px;
 	height: 25px;

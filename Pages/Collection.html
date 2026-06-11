@@ -7,10 +7,9 @@
 		<link
 			rel="icon"
 			type="image/x-icon"
-			href="Assets/Image/BrukselBeeldenBank_logo.png"
+			href="../Assets/Image/BrukselBeeldenBank_logo.png"
 		/>
 		<link rel="stylesheet" href="../css/style.css" />
-		<script src="../js/index.js"></script>
 	</head>
 	<body>
 		<header>
@@ -78,10 +77,22 @@
 						<input type="text" placeholder="Zoeken" />
 					</li>
 					<li>
-						<button class="sorteren_dropdown row">
+						<button id="dropdown_button_sort" class="sorteren_dropdown row">
 							<h2>Sorteren</h2>
 							<h2 class="dropdown_arrow">></h2>
 						</button>
+						<ul id="dropdown_content_sort" class="dropdown_content">
+							<li>
+								<button class="dropdown_content_first">
+									<h2>Datum</h2>
+								</button>
+							</li>
+							<li>
+								<button class="dropdown_content_last">
+									<h2>A-Z</h2>
+								</button>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<button>
@@ -104,6 +115,29 @@
 					<ul class="filter_row">
 						<li class="row">
 							<p>locaities:</p>
+							<section class="loco-dropdown">
+								<button id="dropdown_button_location" class="locaties_dropdown row">
+									<h2  id="dropdown-grijs">Sint-Gillis</h2>
+									<h2 class="dropdown_arrow">></h2>
+								</button>
+								<ul id="dropdown_content_location" class="dropdown_content">
+									<li>
+										<button class="dropdown_content_first">
+											<h2>Noordwijk</h2>
+										</button>
+									</li>
+									<li>
+										<button class="dropdown_content_middle">
+											<h2>Schaarbeek</h2>
+										</button>
+									</li>
+									<li>
+										<button class="dropdown_content_last">
+											<h2>Sint-Gillis</h2>
+										</button>
+									</li>
+								</ul>
+							</section>
 						</li>
 						<li class="row">
 							<p>Datum:</p>
@@ -126,6 +160,7 @@
 				<li id="filtered_image_container">
 					<img
 						id="filtered_image"
+						class="filtered_image"
 						src="../Assets/Image/Test_image.jpg"
 						alt="Filtered image"
 					/>
@@ -135,43 +170,47 @@
 					</p>
 				</li>
 			</ul>
-			<div class="overlay">
-				<button class="arrow left">
-					<img class="lft" src="../Assets/SVG/svgexport-6.svg" alt="" />
-				</button>
-				<div class="overlay-image">
-					<img src="../Assets/Image/Test_image.jpg" alt="" />
-				</div>
-
-				<button class="arrow right">
-					<img class="rgt" src="../Assets/SVG/svgexport-7.svg" alt="" />
-				</button>
-
-				<div class="info-panel">
-					<div class="top-bar">
-						<h3>Informatie</h3>
-						<span>x</span>
-					</div>
-
-					<h1>WTC III,<br />Bouw</h1>
-
-					<p class="meta">📅 1983 📍 Noordwijk</p>
-
-					<p>
-						Heeft u nog vragen? U bent altijd welkom op locatie voor meer
-						informatie.
-					</p>
-
-					<p>​onthaal@brukselbinnenstebuiten.be</p>
-
-					<div class="buttons">
-						<button>Terug naar collectie</button>
-						<a href="../index.html"
-							><button class="full_width">Terug naar home</button></a
-						>
-					</div>
-				</div>
-			</div>
+			<section id="overlay">
+				<ul class="overlay">
+					<li>
+						<button class="arrow">
+							<img class="sort_icon" id="lft" src="../Assets/SVG/svgexport-6.svg" alt="pijl links" />
+						</button>
+					</li>
+					<li class="overlay-image">
+						<img src="../Assets/Image/Test_image.jpg" alt="" />
+					</li>
+					<li>
+						<button class="arrow">
+							<img class="sort_icon" id="rgt" src="../Assets/SVG/svgexport-7.svg" alt="pijl rechts" />
+						</button>
+					</li>
+					<li class="info_panel_container">
+						<ul class="info-panel">
+							<li class="top-bar">
+								<h3>Informatie</h3>
+								<img class="cross" src="../Assets/SVG/cross-svgrepo-com.svg" alt="cross icon">
+							</li>
+							<h1>WTC III, Bouw</h1>
+							<li class="meta">
+								<p class="meta"><img class="aga" src="../Assets/SVG/svgexport-14.svg" alt="agenda icon"> 1983</p>
+								<p class="meta"><img class="loca" src="../Assets/SVG/location-pin-svgrepo-com.svg" alt="locatie icon"> Noordwijk</p>
+							</li>
+							<p>
+								Heeft u nog vragen? U bent altijd welkom op locatie voor meer
+								informatie.
+							</p>
+							<p>+00 32 2 218 38 78</p>
+							<li class="buttons">
+								<button class="back">Terug naar collectie</button>
+								<a href="../index.html"
+									><button class="full_width">Terug naar home</button></a
+								>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
 		</main>
 		<footer>
 			<ul class="footer_center_row_social">
@@ -212,16 +251,6 @@
 				</li>
 			</ul>
 		</footer>
+		<script src="../js/index.js"></script>
 	</body>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Bruksel Beelden Bank - Home</title>
-		<link
-			rel="icon"
-			type="image/x-icon"
-			href="Assets/Image/BrukselBeeldenBank_logo.png"
-		/>
-		<link rel="stylesheet" href="../css/style.css" />
-	</head>
 </html>

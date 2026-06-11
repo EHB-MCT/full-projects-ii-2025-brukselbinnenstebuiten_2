@@ -30,7 +30,7 @@ nav ul {
 
 .searchbar input {
 	border: none;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid var(--primary);
 	padding: 0;
 }
 
@@ -83,19 +83,15 @@ nav ul {
 .overlay {
 	position: fixed;
 	inset: 0;
-
 	background: rgba(0, 0, 0, 0.75);
-
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-
 	z-index: 999;
 }
 
 .overlay-image {
-	width: 60%;
-	height: 85%;
+	height: 80%;
 }
 
 .overlay-image img {
@@ -105,16 +101,17 @@ nav ul {
 }
 
 .info-panel {
-	width: 25%;
+	background: var(--btn);
+	color: var(--primary);
 	height: calc(100% - 32px);
-
-	background: #b45c3e;
-	color: black;
-
 	padding: 16px;
-
 	display: flex;
 	flex-direction: column;
+}
+
+.info_panel_container {
+	width: 25%;
+	height: 100%;
 }
 
 .top-bar {
@@ -131,6 +128,9 @@ nav ul {
 
 .meta {
 	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .info-panel p {
@@ -157,21 +157,22 @@ nav ul {
 
 .arrow {
 	width: 45px;
-	height: 50px;
-
-	border-radius: 50%;
-
-	border: none;
-
-	background: var(--btn);
-
+	height: 45px;
+	background-color: var(--btn);
 	cursor: pointer;
 }
 
-.lft {
+#lft {
 	filter: brightness(0);
+	width: 35px;
 }
 
-.rgt {
+#rgt {
+	filter: brightness(0);
+	width: 35px;
+}
+
+.loca,.aga{
+	width: 20px;
 	filter: brightness(0);
 }
