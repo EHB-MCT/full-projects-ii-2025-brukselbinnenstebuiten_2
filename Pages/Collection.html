@@ -78,18 +78,18 @@
 					</li>
 					<li>
 						<button id="dropdown_button_sort" class="sorteren_dropdown row">
-							<h2>Sorteren</h2>
+							<h2 id="sort_box">Sorteren</h2>
 							<h2 class="dropdown_arrow">></h2>
 						</button>
 						<ul id="dropdown_content_sort" class="dropdown_content">
 							<li>
-								<button class="dropdown_content_first">
-									<h2>Datum</h2>
+								<button id="sort_1_button" class="dropdown_content_first">
+									<h2 id="sort_1">Datum</h2>
 								</button>
 							</li>
 							<li>
-								<button class="dropdown_content_last">
-									<h2>A-Z</h2>
+								<button id="sort_2_button" class="dropdown_content_last">
+									<h2 id="sort_2">A-Z</h2>
 								</button>
 							</li>
 						</ul>
@@ -117,23 +117,28 @@
 							<p>locaities:</p>
 							<section class="loco-dropdown">
 								<button id="dropdown_button_location" class="locaties_dropdown row">
-									<h2  id="dropdown-grijs">Sint-Gillis</h2>
+									<h2 id="dropdown-grijs">-</h2>
 									<h2 class="dropdown_arrow">></h2>
 								</button>
 								<ul id="dropdown_content_location" class="dropdown_content">
 									<li>
-										<button class="dropdown_content_first">
-											<h2>Noordwijk</h2>
+										<button id="location_geen_button" class="dropdown_content_first">
+											<h2 id="location_geen">-</h2>
 										</button>
 									</li>
 									<li>
-										<button class="dropdown_content_middle">
-											<h2>Schaarbeek</h2>
+										<button id="location_1_button" class="dropdown_content_middle">
+											<h2 id="location_1">Noordwijk</h2>
 										</button>
 									</li>
 									<li>
-										<button class="dropdown_content_last">
-											<h2>Sint-Gillis</h2>
+										<button id="location_2_button" class="dropdown_content_middle">
+											<h2 id="location_2">Schaarbeek</h2>
+										</button>
+									</li>
+									<li>
+										<button id="location_3_button" class="dropdown_content_last">
+											<h2 id="location_3">Sint-Gillis</h2>
 										</button>
 									</li>
 								</ul>
@@ -152,6 +157,10 @@
 						<li class="row">
 							<input class="checkbox" type="checkbox" name="check2" id="check2" />
 						<label for="check2">Toon foto's zonder locatie</label>
+						</li>
+						<li class="row">
+							<input class="checkbox" type="checkbox" name="check2" id="check3" />
+						<label for="check3">Toon enkel landkaarten</label>
 						</li>
 					</ul>
 				</ul>
