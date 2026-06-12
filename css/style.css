@@ -220,6 +220,10 @@ button.dropdown_content_middle {
 }
 
 @media (width <= 700px) {
+	.button_center button {
+		font-size: 14px;
+	}
+
 	.inverted_bar {
 		display: none;
 	}
@@ -280,6 +284,8 @@ button.dropdown_content_middle {
 
 	.main_row {
 		flex-wrap: wrap;
+		width: 80%;
+		margin: auto;
 	}
 
 	header {
