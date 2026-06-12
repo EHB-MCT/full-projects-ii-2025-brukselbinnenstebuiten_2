@@ -209,7 +209,7 @@ button.dropdown_content_middle {
 	display: none;
 }
 
-.filtered_image {
+.filtered_image, .cross {
     cursor: pointer;
 }
 
