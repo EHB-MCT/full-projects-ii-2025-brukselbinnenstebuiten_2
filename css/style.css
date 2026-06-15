@@ -87,6 +87,8 @@ button:has(.sort_icon) {
 	justify-content: end;
 	padding-right: 16px;
 	margin-left: 15%;
+	margin-right: 5%;
+
 }
 
 main:has(.top_bar) {

@@ -53,7 +53,6 @@ li:has(.random_image_text) {
 	border: 2px solid var(--btn);
 	border-radius: 20px;
 	padding: 16px;
-	margin-right: 180px;
 }
 
 .filter_row {
