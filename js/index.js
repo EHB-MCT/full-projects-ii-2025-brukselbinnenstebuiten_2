@@ -87,12 +87,24 @@ const location_geen_button = document.getElementById("location_geen_button");
 function createFilteredImages(images) {
     const imageList = document.getElementById("image_list");
     const input = document.getElementById("searchbar");
+    const overlay_image = document.getElementById("overlay_image");
+    const title = document.getElementById("title");
+    const date = document.getElementById("date");
+    const location = document.getElementById("location");
+    let filename_date = "Geen datum";
 
     imageList.innerHTML = "";
-    let image_id = 0;
-    let text_id = 0;
 
     images.forEach(imageData => {
+        const filename = imageData.filename.slice(0, -4);
+        const filename_list = filename.split(/[ ,-]+/);
+        filename_list.forEach(filename_part => {
+            const year = Number(filename_part);
+            if (year > 1000 && year < 5000) {
+                filename_date = filename_part;
+            }
+        });
+        
         const container = document.createElement("li");
         container.className = "filtered_image_container";
 
@@ -103,7 +115,7 @@ function createFilteredImages(images) {
 
         const text = document.createElement("p");
         text.id = "filtered_image_txt";
-        text.textContent = imageData.filename;
+        text.textContent = filename;
         text.hidden = true;
 
         container.appendChild(image);
@@ -112,10 +124,13 @@ function createFilteredImages(images) {
 
         image.addEventListener("click", () => {
             overlay.style.display = "block";
+            overlay_image.src = imageData.path;
+            title.innerText = filename;
+            date.innerText = filename_date;
         });
 
         input.addEventListener("input", () => {
-            const lowName = imageData.filename.toLowerCase();
+            const lowName = filename.toLowerCase();
             const lowInput = input.value.toLowerCase();
             if (lowName.includes(lowInput)) {
                 container.removeAttribute("hidden");

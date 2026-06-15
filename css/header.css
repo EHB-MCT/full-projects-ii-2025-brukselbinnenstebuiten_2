@@ -85,20 +85,28 @@ nav ul {
 	position: fixed;
 	inset: 0;
 	background: rgba(0, 0, 0, 0.75);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr 3fr;
+	grid-template-rows: 100%;
 	z-index: 999;
 }
 
 .overlay-image {
-	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .overlay-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	max-width: 100%;
+	min-width: none;
+	max-height: 90%;
+}
+
+li:has(.arrow) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .info-panel {
@@ -111,7 +119,6 @@ nav ul {
 }
 
 .info_panel_container {
-	width: 25%;
 	height: 100%;
 }
 
