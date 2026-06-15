@@ -56,6 +56,7 @@ nav ul {
 	padding-left: 5%;
 	height: 150px;
 	margin-bottom: -75px;
+	z-index: 50;
 }
 
 .logo img {

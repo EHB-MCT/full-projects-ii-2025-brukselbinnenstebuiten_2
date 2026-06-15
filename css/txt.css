@@ -34,6 +34,9 @@ li:has(.random_image_text) {
 
 .sorteren_dropdown {
 	padding: 8px;
+	width: 130px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .dropdown_arrow {
@@ -50,7 +53,6 @@ li:has(.random_image_text) {
 	border: 2px solid var(--btn);
 	border-radius: 20px;
 	padding: 16px;
-	margin-right: 180px;
 }
 
 .filter_row {
@@ -62,10 +64,6 @@ li:has(.random_image_text) {
 
 .loco-dropdown h2{
 	color: var(--primary);
-}
-
-#dropdown-grijs{
-	color: var(--disabled-txt);
 }
 
 .typ {

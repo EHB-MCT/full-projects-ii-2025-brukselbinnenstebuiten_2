@@ -87,6 +87,8 @@ button:has(.sort_icon) {
 	justify-content: end;
 	padding-right: 16px;
 	margin-left: 15%;
+	margin-right: 5%;
+
 }
 
 main:has(.top_bar) {
@@ -209,6 +211,9 @@ button.dropdown_content_middle {
 	display: none;
 }
 
+.filtered_image, .cross {
+    cursor: pointer;
+}
 
 @media (width <= 1000px) {
 	.filter_row {
@@ -217,6 +222,10 @@ button.dropdown_content_middle {
 }
 
 @media (width <= 700px) {
+	.button_center button {
+		font-size: 14px;
+	}
+
 	.inverted_bar {
 		display: none;
 	}
@@ -277,6 +286,8 @@ button.dropdown_content_middle {
 
 	.main_row {
 		flex-wrap: wrap;
+		width: 80%;
+		margin: auto;
 	}
 
 	header {
