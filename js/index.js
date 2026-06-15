@@ -1,5 +1,5 @@
 const overlay = document.getElementById("overlay");
-const filtered_image = document.querySelector(".filtered_image");
+const filtered_image = document.querySelector("#filtered_image");
 const back = document.querySelector(".back");
 const cross = document.querySelector(".cross");
 const dropdown_button_location = document.querySelector("#dropdown_button_location");
@@ -20,62 +20,74 @@ const location_3 = document.querySelector("#location_3");
 const location_3_button = document.querySelector("#location_3_button");
 const location_geen = document.querySelector("#location_geen");
 const location_geen_button = document.querySelector("#location_geen_button");
+let images = [];
 
 
-filtered_image.addEventListener("click", () => {
-    overlay.style.display = "block";
-});
+fetch("../js/beeldbank.json")
+    .then(res => res.json())
+    .then(data => {
+        images = data;
+        console.log(data);
 
-back.addEventListener("click", () => {
-    overlay.style.display = "none";
-});
 
-cross.addEventListener("click", () => {
-    overlay.style.display = "none";
-});
+        filtered_image.src = images[0].path;
 
-dropdown_button_location.addEventListener("click", () => {
-    if (dropdown_content_location.style.display == "block") {
-        dropdown_content_location.style.display = "none";
-    } else {
-        dropdown_content_location.style.display = "block";
-    }
-});
-
-dropdown_button_sort.addEventListener("click", () => {
-    if (dropdown_content_sort.style.display == "block") {
-        dropdown_content_sort.style.display = "none";
-    } else {
-        dropdown_content_sort.style.display = "block";
-    }
-});
-
-sort_1_button.addEventListener("click", () => {
-    dropdown_content_sort.style.display = "none";
-    sort_box.innerText = sort_1.innerText;
-});
-
-sort_2_button.addEventListener("click", () => {
-    dropdown_content_sort.style.display = "none";
-    sort_box.innerText = sort_2.innerText;
-});
-
-location_1_button.addEventListener("click", () => {
-    dropdown_content_location.style.display = "none";
-    location_box.innerText = location_1.innerText;
-});
-
-location_2_button.addEventListener("click", () => {
-    dropdown_content_location.style.display = "none";
-    location_box.innerText = location_2.innerText;
-});
-
-location_3_button.addEventListener("click", () => {
-    dropdown_content_location.style.display = "none";
-    location_box.innerText = location_3.innerText;
-});
-
-location_geen_button.addEventListener("click", () => {
-    dropdown_content_location.style.display = "none";
-    location_box.innerText = location_geen.innerText;
-});
+        filtered_image.addEventListener("click", () => {
+            overlay.style.display = "block";
+        });
+        
+        back.addEventListener("click", () => {
+            overlay.style.display = "none";
+        });
+        
+        cross.addEventListener("click", () => {
+            overlay.style.display = "none";
+        });
+        
+        dropdown_button_location.addEventListener("click", () => {
+            if (dropdown_content_location.style.display == "block") {
+                dropdown_content_location.style.display = "none";
+            } else {
+                dropdown_content_location.style.display = "block";
+            }
+        });
+        
+        dropdown_button_sort.addEventListener("click", () => {
+            if (dropdown_content_sort.style.display == "block") {
+                dropdown_content_sort.style.display = "none";
+            } else {
+                dropdown_content_sort.style.display = "block";
+            }
+        });
+        
+        sort_1_button.addEventListener("click", () => {
+            dropdown_content_sort.style.display = "none";
+            sort_box.innerText = sort_1.innerText;
+        });
+        
+        sort_2_button.addEventListener("click", () => {
+            dropdown_content_sort.style.display = "none";
+            sort_box.innerText = sort_2.innerText;
+        });
+        
+        location_1_button.addEventListener("click", () => {
+            dropdown_content_location.style.display = "none";
+            location_box.innerText = location_1.innerText;
+        });
+        
+        location_2_button.addEventListener("click", () => {
+            dropdown_content_location.style.display = "none";
+            location_box.innerText = location_2.innerText;
+        });
+        
+        location_3_button.addEventListener("click", () => {
+            dropdown_content_location.style.display = "none";
+            location_box.innerText = location_3.innerText;
+        });
+        
+        location_geen_button.addEventListener("click", () => {
+            dropdown_content_location.style.display = "none";
+            location_box.innerText = location_geen.innerText;
+        });
+    });
+    

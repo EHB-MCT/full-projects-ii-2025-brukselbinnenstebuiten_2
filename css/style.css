@@ -159,7 +159,7 @@ button:hover h2 {
     display: block;
 }
 
-.stift-overlay{
+.marker-overlay{
     position: absolute;
     top: -10%;
     left: -10%;
@@ -169,7 +169,7 @@ button:hover h2 {
 	z-index: 100;
 }
 
-.stift-overlay-pijl {
+.marker-overlay-arrow {
 	position: absolute;
     top: -15%;
     left: -15%;
