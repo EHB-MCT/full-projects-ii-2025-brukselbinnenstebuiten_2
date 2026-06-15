@@ -88,7 +88,6 @@ button:has(.sort_icon) {
 	padding-right: 16px;
 	margin-left: 15%;
 	margin-right: 5%;
-
 }
 
 main:has(.top_bar) {
@@ -98,6 +97,7 @@ main:has(.top_bar) {
 .button_center {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 60px;
 }
 
 .button_center button {
