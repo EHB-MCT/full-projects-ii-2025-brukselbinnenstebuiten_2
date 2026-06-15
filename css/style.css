@@ -50,6 +50,7 @@ main {
 .random_image_container {
 	overflow: hidden;
 	width: 90%;
+	
 }
 
 .random_image_list {
@@ -213,6 +214,13 @@ button.dropdown_content_middle {
 
 .filtered_image, .cross {
     cursor: pointer;
+}
+
+.filtered_image {
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+	overflow: hidden;
 }
 
 @media (width <= 1000px) {
