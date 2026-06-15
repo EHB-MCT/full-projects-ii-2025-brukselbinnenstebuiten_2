@@ -27,7 +27,7 @@ li:has(.random_image_text) {
 	color: var(--inverted);
 }
 
-#filtered_image_container p {
+.filtered_image_container p {
 	color: var(--special-txt);
 	font-size: 12px;
 }

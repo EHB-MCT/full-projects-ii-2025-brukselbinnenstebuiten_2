@@ -70,7 +70,7 @@
 				<ul class="row">
 					<li class="searchbar">
 						<img src="../Assets/SVG/Search.svg" alt="Search icon" />
-						<input type="text" placeholder="Zoeken" />
+						<input id="searchbar" type="text" placeholder="Zoeken" />
 					</li>
 					<li>
 						<button id="dropdown_button_sort" class="sorteren_dropdown row">
@@ -161,10 +161,9 @@
 					</ul>
 				</ul>
 			</section>
-			<ul>
-				<li id="filtered_image_container">
+			<ul id="image_list">
+				<li class="filtered_image_container">
 					<img
-						id="filtered_image"
 						class="filtered_image"
 						src="../Assets/Image/Test_image.jpg"
 						alt="Filtered image"
@@ -194,7 +193,7 @@
 						<ul class="info-panel">
 							<li class="top-bar">
 								<h3>Informatie</h3>
-								<img class="cross" src="../Assets/SVG/cross-svgrepo-com.svg" alt="cross icon">
+								<img id="cross" class="cross" src="../Assets/SVG/cross-svgrepo-com.svg" alt="cross icon">
 							</li>
 							<h1>WTC III, Bouw</h1>
 							<li class="meta">
@@ -207,7 +206,7 @@
 							</p>
 							<p>+00 32 2 218 38 78</p>
 							<li class="buttons">
-								<button class="back">Terug naar collectie</button>
+								<button id="back" class="back">Terug naar collectie</button>
 								<a href="../index.html"
 									><button class="full_width">Terug naar home</button></a
 								>
