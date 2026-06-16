@@ -110,7 +110,7 @@
 					<h2>Filter</h2>
 					<ul class="filter_row">
 						<li class="row">
-							<p>locaties:</p>
+							<p>Locaties:</p>
 							<section class="loco-dropdown">
 								<button id="dropdown_button_location" class="locaties_dropdown row">
 									<h2 id="dropdown-grijs">-</h2>
@@ -134,7 +134,7 @@
 									</li>
 									<li>
 										<button id="location_3_button" class="dropdown_content_last">
-											<h2 id="location_3">Sint-Gillis</h2>
+											<h2 id="location_3">St-Gillis</h2>
 										</button>
 									</li>
 								</ul>
@@ -142,23 +142,20 @@
 						</li>
 						<li class="row">
 							<p>Datum:</p>
-							<input class="typ" type="text" placeholder="1990" maxlength="4" />
+							<input id="date_lowest" class="typ" type="text" placeholder="1990" maxlength="4" minlength="4"/>
 							<p>tot</p>
-							<input class="typ" type="text" placeholder="2006" maxlength="4" />
+							<input id="date_highest" class="typ" type="text" placeholder="2006" maxlength="4" minlength="4"/>
 						</li>
 						<li class="row">
-						<input class="checkbox" type="checkbox" name="check1" id="check1" />	
-						<label for="check1">Toon foto's zonder datum</label>
-						</li>
-						<li class="row">
-							<input class="checkbox" type="checkbox" name="check2" id="check2" />
-						<label for="check2">Toon foto's zonder locatie</label>
+						<input class="checkbox" type="checkbox" name="check1" id="check1"/>	
+						<label for="check1">Toon foto's zonder datum of locatie</label>
 						</li>
 						<li class="row">
 							<input class="checkbox" type="checkbox" name="check2" id="check3" />
 						<label for="check3">Toon enkel landkaarten</label>
 						</li>
 					</ul>
+					<button id="filter_confirm">Filter</button>
 				</ul>
 			</section>
 			<ul id="image_list">
@@ -197,8 +194,8 @@
 							</li>
 							<h1 id="title">WTC III, Bouw</h1>
 							<li class="meta">
-								<p class="meta" id="date"><img class="aga" src="../Assets/SVG/svgexport-14.svg" alt="agenda icon"> 1983</p>
-								<p class="meta" id="location"><img class="loca" src="../Assets/SVG/location-pin-svgrepo-com.svg" alt="locatie icon"> Noordwijk</p>
+								<div class="meta"><img class="aga" src="../Assets/SVG/svgexport-14.svg" alt="agenda icon"><p id="date">1983</p></div>
+								<div class="meta"><img class="loca" src="../Assets/SVG/location-pin-svgrepo-com.svg" alt="locatie icon"><p id="location">Noordwijk</p></div>
 							</li>
 							<p>
 								Heeft u nog vragen? U bent altijd welkom op locatie voor meer
@@ -207,9 +204,7 @@
 							<p>+00 32 2 218 38 78</p>
 							<li class="buttons">
 								<button id="back" class="back">Terug naar collectie</button>
-								<a href="../index.html"
-									><button class="full_width">Terug naar home</button></a
-								>
+								<a href="../index.html"><button class="full_width">Terug naar home</button></a>
 							</li>
 						</ul>
 					</li>

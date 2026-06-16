@@ -228,6 +228,10 @@ button.dropdown_content_middle {
 	overflow: hidden;
 }
 
+#date, #location {
+	margin: 0;
+}
+
 @media (width <= 1000px) {
 	.filter_row {
 		grid-template-columns: repeat(1, 1fr);
