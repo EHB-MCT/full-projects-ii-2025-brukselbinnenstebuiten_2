@@ -43,7 +43,7 @@ function fillRow(fotos, rowId) {
         const li = document.createElement("li");
         const img = document.createElement("img");
 
-        img.className = "main_row_img";
+        img.className = "main_row_img suggested_image";
         img.src = imageData.path;
         img.alt = imageData.filename;
 

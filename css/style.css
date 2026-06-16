@@ -41,10 +41,17 @@ main {
 }
 
 .main_row {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-auto-flow: column;
 	column-gap: 16px;
 	padding: 16px;
+}
+
+.suggested_image {
+	overflow: hidden;
+	object-fit: cover;
+    object-position: center;
+	height: 200px;
 }
 
 .main_row_img {
@@ -189,7 +196,7 @@ button:hover h2 {
 	width: 120%;
 	opacity: 0;
 	transition: 0.3s;
-	z-index: 100;
+	z-index: 1000;
 }
 
 .marker-overlay-arrow {
@@ -199,7 +206,7 @@ button:hover h2 {
 	width: 40%;
 	opacity: 0;
 	transition: 0.3s;
-	z-index: 100;
+	z-index: 1000;
 }
 
 .main_row li:hover .marker-overlay,
