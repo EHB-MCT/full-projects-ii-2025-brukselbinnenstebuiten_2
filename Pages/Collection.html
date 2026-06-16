@@ -69,7 +69,11 @@
 			<section class="top_bar">
 				<ul class="row">
 					<li class="searchbar">
-						<img src="../Assets/SVG/Search.svg" alt="Search icon" />
+						<img
+							class="search-icon"
+							src="../Assets/SVG/Search.svg"
+							alt="Search icon"
+						/>
 						<input id="searchbar" type="text" placeholder="Zoeken" />
 					</li>
 					<li>
@@ -112,29 +116,49 @@
 						<li class="row">
 							<p>Locaties:</p>
 							<section class="loco-dropdown">
-								<button id="dropdown_button_location" class="locaties_dropdown row">
+								<button
+									id="dropdown_button_location"
+									class="locaties_dropdown row"
+								>
 									<h2 id="dropdown-grijs">-</h2>
 									<h2 class="dropdown_arrow">></h2>
 								</button>
 								<ul id="dropdown_content_location" class="dropdown_content">
 									<li>
-										<button id="location_geen_button" class="dropdown_content_first">
+										<button
+											id="location_geen_button"
+											class="dropdown_content_first"
+										>
 											<h2 id="location_geen">-</h2>
 										</button>
 									</li>
 									<li>
-										<button id="location_1_button" class="dropdown_content_middle">
+										<button
+											id="location_1_button"
+											class="dropdown_content_middle"
+										>
 											<h2 id="location_1">Noordwijk</h2>
 										</button>
 									</li>
 									<li>
-										<button id="location_2_button" class="dropdown_content_middle">
+										<button
+											id="location_2_button"
+											class="dropdown_content_middle"
+										>
 											<h2 id="location_2">Schaarbeek</h2>
 										</button>
 									</li>
 									<li>
+<<<<<<< HEAD
 										<button id="location_3_button" class="dropdown_content_last">
 											<h2 id="location_3">St-Gillis</h2>
+=======
+										<button
+											id="location_3_button"
+											class="dropdown_content_last"
+										>
+											<h2 id="location_3">Sint-Gillis</h2>
+>>>>>>> 9c718f206e3a71625b20a89d74b6790198d911cd
 										</button>
 									</li>
 								</ul>
@@ -147,12 +171,36 @@
 							<input id="date_highest" class="typ" type="text" placeholder="2006" maxlength="4" minlength="4"/>
 						</li>
 						<li class="row">
+<<<<<<< HEAD
 						<input class="checkbox" type="checkbox" name="check1" id="check1"/>	
 						<label for="check1">Toon foto's zonder datum of locatie</label>
+=======
+							<input
+								class="checkbox"
+								type="checkbox"
+								name="check1"
+								id="check1"
+							/>
+							<label for="check1">Toon foto's zonder datum</label>
 						</li>
 						<li class="row">
-							<input class="checkbox" type="checkbox" name="check2" id="check3" />
-						<label for="check3">Toon enkel landkaarten</label>
+							<input
+								class="checkbox"
+								type="checkbox"
+								name="check2"
+								id="check2"
+							/>
+							<label for="check2">Toon foto's zonder locatie</label>
+>>>>>>> 9c718f206e3a71625b20a89d74b6790198d911cd
+						</li>
+						<li class="row">
+							<input
+								class="checkbox"
+								type="checkbox"
+								name="check2"
+								id="check3"
+							/>
+							<label for="check3">Toon enkel landkaarten</label>
 						</li>
 					</ul>
 					<button id="filter_confirm">Filter</button>
@@ -175,27 +223,65 @@
 				<ul class="overlay">
 					<li>
 						<button class="arrow">
-							<img class="sort_icon" id="lft" src="../Assets/SVG/svgexport-6.svg" alt="pijl links" />
+							<img
+								class="sort_icon"
+								id="lft"
+								src="../Assets/SVG/svgexport-6.svg"
+								alt="pijl links"
+							/>
 						</button>
 					</li>
 					<li class="overlay-image">
-						<img id="overlay_image" src="../Assets/Image/Test_image.jpg" alt="" />
+						<img
+							id="overlay_image"
+							src="../Assets/Image/Test_image.jpg"
+							alt=""
+						/>
 					</li>
 					<li>
 						<button class="arrow">
-							<img class="sort_icon" id="rgt" src="../Assets/SVG/svgexport-7.svg" alt="pijl rechts" />
+							<img
+								class="sort_icon"
+								id="rgt"
+								src="../Assets/SVG/svgexport-7.svg"
+								alt="pijl rechts"
+							/>
 						</button>
 					</li>
 					<li class="info_panel_container">
 						<ul class="info-panel">
 							<li class="top-bar">
 								<h3>Informatie</h3>
-								<img id="cross" class="cross" src="../Assets/SVG/cross-svgrepo-com.svg" alt="cross icon">
+								<img
+									id="cross"
+									class="cross"
+									src="../Assets/SVG/cross-svgrepo-com.svg"
+									alt="cross icon"
+								/>
 							</li>
 							<h1 id="title">WTC III, Bouw</h1>
 							<li class="meta">
+<<<<<<< HEAD
 								<div class="meta"><img class="aga" src="../Assets/SVG/svgexport-14.svg" alt="agenda icon"><p id="date">1983</p></div>
 								<div class="meta"><img class="loca" src="../Assets/SVG/location-pin-svgrepo-com.svg" alt="locatie icon"><p id="location">Noordwijk</p></div>
+=======
+								<p class="meta" id="date">
+									<img
+										class="aga"
+										src="../Assets/SVG/svgexport-14.svg"
+										alt="agenda icon"
+									/>
+									1983
+								</p>
+								<p class="meta" id="location">
+									<img
+										class="loca"
+										src="../Assets/SVG/location-pin-svgrepo-com.svg"
+										alt="locatie icon"
+									/>
+									Noordwijk
+								</p>
+>>>>>>> 9c718f206e3a71625b20a89d74b6790198d911cd
 							</li>
 							<p>
 								Heeft u nog vragen? U bent altijd welkom op locatie voor meer
@@ -210,21 +296,31 @@
 					</li>
 				</ul>
 			</section>
-			<ul class="beeldbank_scroll">				
-			<button class="arrow">
-				<img class="sort_icon" id="lft" src="../Assets/SVG/svgexport-6.svg" alt="pijl links" />
-			</button>
-			<li class="beeldbank_scroll">
-				<button><p>1</p></button>
-				<button><p>2</p></button>
-				<button><p>...</p></button>
-				<button><p>599</p></button>
-				<button><p>600</p></button>
-			</li>
-			<button class="arrow">
-			<img class="sort_icon" id="rgt" src="../Assets/SVG/svgexport-7.svg" alt="pijl rechts" />
-			</button>
-		</ul>
+			<ul class="beeldbank_scroll">
+				<button class="arrow">
+					<img
+						class="sort_icon"
+						id="lft"
+						src="../Assets/SVG/svgexport-6.svg"
+						alt="pijl links"
+					/>
+				</button>
+				<li class="beeldbank_scroll">
+					<button><p>1</p></button>
+					<button><p>2</p></button>
+					<button><p>...</p></button>
+					<button><p>599</p></button>
+					<button><p>600</p></button>
+				</li>
+				<button class="arrow">
+					<img
+						class="sort_icon"
+						id="rgt"
+						src="../Assets/SVG/svgexport-7.svg"
+						alt="pijl rechts"
+					/>
+				</button>
+			</ul>
 		</main>
 		<footer>
 			<ul class="footer_center_row_social">
