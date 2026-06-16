@@ -20,6 +20,18 @@ main {
 	padding-top: 50px;
 }
 
+.nav-link{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 9px 32px;
+}
+
+.nav-link:hover h2{
+	color: var(--btn);
+}
+
 .right_row {
 	display: flex;
 	flex-direction: row;

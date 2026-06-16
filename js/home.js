@@ -36,11 +36,11 @@ function fillRow(fotos, rowId) {
     const row = document.getElementById(rowId);
 
     row.innerHTML = "";
+    let amount = 0;
 
     fotos.forEach(imageData => {
-
+        amount += 1;
         const li = document.createElement("li");
-
         const img = document.createElement("img");
 
         img.className = "main_row_img";
@@ -50,11 +50,33 @@ function fillRow(fotos, rowId) {
         const inverted_bar_img = document.createElement("img");
 
         inverted_bar_img.className = "main_row_img";
-        inverted_bar_img.src = imageData.path;
+        inverted_bar_img.src = "Assets/Image/Inverted_bar_image_" + amount + ".png";
         inverted_bar_img.alt = "inverted bar img";
+
+        const choice = Math.floor(Math.random() * 4);
+        console.log(choice);
 
         li.appendChild(img);
         li.appendChild(inverted_bar_img);
+        if (choice == 1) {
+            const box = document.createElement("img");
+            box.className = "marker-overlay";
+            box.src = "Assets/Image/Vector5.png";
+            box.alt = "overlay square";
+            li.appendChild(box);
+        } else if (choice == 2) {
+            const arrow = document.createElement("img");
+            arrow.className = "marker-overlay-arrow";
+            arrow.src = "Assets/Image/Group 1.png";
+            arrow.alt = "overlay arrow";
+            li.appendChild(arrow);
+        } else if (choice == 3) {
+            const circle = document.createElement("img");
+            circle.className = "marker-overlay";
+            circle.src = "Assets/Image/Vector 1.png";
+            circle.alt = "overlay circle";
+            li.appendChild(circle);
+        }
 
         row.appendChild(li);
 
