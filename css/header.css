@@ -126,7 +126,7 @@ li:has(.arrow) {
 
 .top-bar {
 	display: flex;
-	justify-content: space-between;
+	justify-content: end;
 	align-items: center;
 }
 

@@ -10,14 +10,13 @@ const sort_1 = document.getElementById("sort_1");
 const sort_1_button = document.getElementById("sort_1_button");
 const sort_2 = document.getElementById("sort_2");
 const sort_2_button = document.getElementById("sort_2_button");
-const location_box = document.getElementById("dropdown-grijs");
 const location_1 = document.getElementById("location_1");
 const location_1_button = document.getElementById("location_1_button");
 const location_2 = document.getElementById("location_2");
 const location_2_button = document.getElementById("location_2_button");
 const location_3 = document.getElementById("location_3");
 const location_3_button = document.getElementById("location_3_button");
-const location_geen = document.getElementById("location_geen");
+const location_none = document.getElementById("location_none");
 const location_geen_button = document.getElementById("location_geen_button");
 const imageList = document.getElementById("image_list");
 const input = document.getElementById("searchbar");
@@ -31,6 +30,8 @@ const date_lowest = document.getElementById("date_lowest");
 const date_highest = document.getElementById("date_highest");
 const check1 = document.getElementById("check1");
 const check3 = document.getElementById("check3");
+const params = new URLSearchParams(window.location.search);
+const gegeven = params.get("gegeven");
 
 (async () => {
     const imagesRes = await fetch("../js/beeldbank.json");
@@ -40,7 +41,7 @@ const check3 = document.getElementById("check3");
     console.log(images);
 
     createFilteredImages(images);
-    
+
     dropdown_button_location.addEventListener("click", () => {
         if (dropdown_content_location.style.display == "block") {
             dropdown_content_location.style.display = "none";
@@ -67,26 +68,6 @@ const check3 = document.getElementById("check3");
         sort_box.innerText = sort_2.innerText;
     });
     
-    location_1_button.addEventListener("click", () => {
-        dropdown_content_location.style.display = "none";
-        location_box.innerText = location_1.innerText;
-    });
-    
-    location_2_button.addEventListener("click", () => {
-        dropdown_content_location.style.display = "none";
-        location_box.innerText = location_2.innerText;
-    });
-    
-    location_3_button.addEventListener("click", () => {
-        dropdown_content_location.style.display = "none";
-        location_box.innerText = location_3.innerText;
-    });
-    
-    location_geen_button.addEventListener("click", () => {
-        dropdown_content_location.style.display = "none";
-        location_box.innerText = location_geen.innerText;
-    });
-    
     back.addEventListener("click", () => {
         overlay.style.display = "none";
     });
@@ -95,8 +76,6 @@ const check3 = document.getElementById("check3");
         overlay.style.display = "none";
     });
 })();
-
-
 
 function createFilteredImages(images) {
     imageList.innerHTML = "";
@@ -149,7 +128,67 @@ function createFilteredImages(images) {
             }
         });
 
-        filter_confirm.addEventListener("click", () => {
+        date_highest.addEventListener("input", () => {
+            filtering();
+        });
+
+        date_lowest.addEventListener("input", () => {
+            filtering();
+        });
+
+        location_1_button.addEventListener("click", () => {
+            dropdown_content_location.style.display = "none";
+            chosen_location.innerText = location_1.innerText;
+            filtering();
+        });
+        
+        location_2_button.addEventListener("click", () => {
+            dropdown_content_location.style.display = "none";
+            chosen_location.innerText = location_2.innerText;
+            filtering();
+        });
+        
+        location_3_button.addEventListener("click", () => {
+            dropdown_content_location.style.display = "none";
+            chosen_location.innerText = location_3.innerText;
+            filtering();
+        });
+        
+        location_geen_button.addEventListener("click", () => {
+            dropdown_content_location.style.display = "none";
+            chosen_location.innerText = location_none.innerText;
+            filtering();
+        });
+
+        check1.addEventListener("click", () => {
+            filtering();
+        });
+
+        check3.addEventListener("click", () => {
+            filtering();
+        });
+
+        image.addEventListener("click", () => {
+            overlay.style.display = "block";
+            overlay_image.src = imageData.path;
+            title.innerText = filename;
+            date.innerText = filename_date;
+            locations.innerText = filename_location;
+        });
+
+        function filter_part() {
+            if (chosen_location.innerText.toLowerCase() != "-") {
+                if (filename.toLowerCase().includes(chosen_location.innerText.toLowerCase())) {
+                    container.removeAttribute("hidden");
+                } else {
+                    container.setAttribute("hidden", true);
+                }
+            } else {
+                container.removeAttribute("hidden");
+            }
+        }
+
+        function filtering() {
             container.setAttribute("hidden", true);
             if (date_lowest.value != "" || date_highest.value != "") {
                 if (filename_date != "Geen datum") {
@@ -194,31 +233,15 @@ function createFilteredImages(images) {
                     container.setAttribute("hidden", true);
                 }
             }
-            const lowName = filename.toLowerCase();
-            const lowInput = input.value.toLowerCase();
-            if (!lowName.includes(lowInput)) {
-                container.setAttribute("hidden", true);
-            }
-        });
-
-        image.addEventListener("click", () => {
-            overlay.style.display = "block";
-            overlay_image.src = imageData.path;
-            title.innerText = filename;
-            date.innerText = filename_date;
-            locations.innerText = filename_location;
-        });
-
-        function filter_part() {
-            if (chosen_location.innerText.toLowerCase() != "-") {
-                if (filename.toLowerCase().includes(chosen_location.innerText.toLowerCase())) {
-                    container.removeAttribute("hidden");
-                } else {
+            if (filename_date != "Geen datum" && filename_location != "Geen locatie" && check1.checked) {
+                const lowName = filename.toLowerCase();
+                const lowInput = input.value.toLowerCase();
+                if (!lowName.includes(lowInput)) {
                     container.setAttribute("hidden", true);
                 }
-            } else {
-                container.removeAttribute("hidden");
             }
         }
     });
+    input.value = gegeven;
+    input.dispatchEvent(new Event("input"));
 }

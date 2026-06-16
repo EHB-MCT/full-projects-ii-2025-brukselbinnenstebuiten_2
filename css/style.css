@@ -97,12 +97,10 @@ main:has(.top_bar) {
 .button_center {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 60px;
+	margin-bottom: 6px;
 }
 
-.button_center button {
-	font-size: 24px;
-}
+
 
 .full_width {
 	width: 100%;
@@ -223,6 +221,7 @@ button.dropdown_content_middle {
 .dropdown_content {
 	position: absolute;
 	display: none;
+	z-index: 50;
 }
 
 .filtered_image,

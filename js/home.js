@@ -1,39 +1,63 @@
-
-const locations = document.getElementById("location");
-const filter_confirm = document.getElementById("filter_confirm");
 const suggestion1 = document.getElementById("suggestion1");
 const suggestion2 = document.getElementById("suggestion2");
 const suggestion3 = document.getElementById("suggestion3");
 
+suggestion1.addEventListener("click", () => {
+    window.location.href = `pages/Collection.html?gegeven=${encodeURIComponent(suggestion1.innerText)}`;
+});
 
+suggestion2.addEventListener("click", () => {
+    window.location.href = `pages/Collection.html?gegeven=${encodeURIComponent(suggestion2.innerText)}`;
+});
 
+suggestion3.addEventListener("click", () => {
+    window.location.href = `pages/Collection.html?gegeven=${encodeURIComponent(suggestion3.innerText)}`;
+});
 
+(async () => {
 
-// const params = new URLSearchParams(window.location.search);
+    const imagesRes = await fetch("js/beeldbank.json");
+    const images = await imagesRes.json();
 
-// const locatieParam = params.get("locatie");
-// const jaarParam = params.get("jaar");
+    const main_row_1 = images.filter(image => image.filename.toLowerCase().includes(suggestion1.innerText.toLowerCase())).slice(0, 5);
 
-// if (locatieParam) {
+    const main_row_2 = images.filter(image => image.filename.toLowerCase().includes(suggestion2.innerText.toLowerCase())).slice(0, 5);
 
-//     location_box.innerText = locatieParam;
+    const main_row_3 = images.filter(image => image.filename.toLowerCase().includes(suggestion3.innerText.toLowerCase())).slice(0, 5);
 
-//     setTimeout(() => {
-//         filter_confirm.click();
-//     }, 100);
+    fillRow(main_row_1, "main_row_1");
+    fillRow(main_row_2, "main_row_2");
+    fillRow(main_row_3, "main_row_3");
 
-// }
+})();
 
-// if (jaarParam) {
+function fillRow(fotos, rowId) {
 
-//     date_lowest.value = jaarParam;
-//     date_highest.value = jaarParam;
+    const row = document.getElementById(rowId);
 
-//     setTimeout(() => {
-//         filter_confirm.click();
-//     }, 100);
+    row.innerHTML = "";
 
-// }
+    fotos.forEach(imageData => {
 
+        const li = document.createElement("li");
 
-/*createFilteredImages(images);*/
+        const img = document.createElement("img");
+
+        img.className = "main_row_img";
+        img.src = imageData.path;
+        img.alt = imageData.filename;
+
+        const inverted_bar_img = document.createElement("img");
+
+        inverted_bar_img.className = "main_row_img";
+        inverted_bar_img.src = imageData.path;
+        inverted_bar_img.alt = "inverted bar img";
+
+        li.appendChild(img);
+        li.appendChild(inverted_bar_img);
+
+        row.appendChild(li);
+
+    });
+
+}
