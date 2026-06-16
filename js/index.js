@@ -194,6 +194,11 @@ function createFilteredImages(images) {
                     container.setAttribute("hidden", true);
                 }
             }
+            const lowName = filename.toLowerCase();
+            const lowInput = input.value.toLowerCase();
+            if (!lowName.includes(lowInput)) {
+                container.setAttribute("hidden", true);
+            }
         });
 
         image.addEventListener("click", () => {
