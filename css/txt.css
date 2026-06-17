@@ -94,3 +94,8 @@ input[type="checkbox"]:checked::after {
 input::placeholder {
 	color: var(--disabled-txt);
 }
+
+#title {
+	overflow-wrap: break-word;
+	word-break: break-word;
+}

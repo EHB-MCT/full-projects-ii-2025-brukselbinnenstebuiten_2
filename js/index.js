@@ -37,9 +37,13 @@ const filter_normal = document.getElementById("filter_normal");
 const filter_inverted = document.getElementById("filter_inverted");
 const right_page = document.getElementById("right_page");
 const left_page = document.getElementById("left_page");
+const left_arrow = document.getElementById("left_arrow");
+const right_arrow = document.getElementById("right_arrow");
 const imagesPerPage = 30;
 let currentPage = 1;
 let totalPages = 0;
+let currentImageIndex = 0;
+let currentFilteredImages = [];
 
 (async () => {
     const imagesRes = await fetch("../js/beeldbank.json");
@@ -77,6 +81,22 @@ let totalPages = 0;
     
     createFilteredImages(images, currentPage);
     createPageIcons(images);
+
+    left_arrow.addEventListener("click", () => {
+        currentImageIndex -= 1;
+        if (currentImageIndex < 0) {
+            currentImageIndex = currentFilteredImages.length - 1;
+        }
+        showOverlayImage();
+    });
+
+    right_arrow.addEventListener("click", () => {
+        currentImageIndex += 1;
+        if (currentImageIndex >= currentFilteredImages.length) {
+            currentImageIndex = 0;
+        }
+        showOverlayImage();
+    });
 
     input.value = gegeven;
     input.dispatchEvent(new Event("input"));
@@ -240,6 +260,7 @@ function createFilteredImages(images, page = 1) {
 
     const filteredImages = images.filter(imageData => {
         const filename = imageData.filename.slice(0, -4).toLowerCase();
+
         if (!filename.includes(input.value.toLowerCase())) {
             return false;
         }
@@ -252,8 +273,15 @@ function createFilteredImages(images, page = 1) {
         if (date_highest.value && imageData.date_correct !== "Geen datum" && imageData.date_correct > Number(date_highest.value)) {
             return false;
         }
+        if (check1.checked && imageData.date_correct !== "Geen datum" && imageData.location !== "Geen locatie") {
+            return false;
+        }
+        if (check3.checked && !filename.includes("kaart")) {
+            return false;
+        }
         return true;
     });
+    currentFilteredImages = filteredImages;
 
     const start = (page - 1) * imagesPerPage;
     const end = start + imagesPerPage;
@@ -279,82 +307,21 @@ function createFilteredImages(images, page = 1) {
         imageList.appendChild(container);
 
         image.addEventListener("click", () => {
-            overlay.style.display = "block";
-            overlay_image.src = imageData.path;
-            title.innerText = filename;
-            date.innerText = imageData.date_correct;
-            locations.innerText = imageData.location;
+            currentImageIndex = filteredImages.indexOf(imageData);
+            showOverlayImage();
         });
-        filtering(imageData.date_correct, imageData.location, container, filename);
     });
-
     createPageIcons(filteredImages);
 }
 
-function filter_part(filename, container) {
-    if (chosen_location.innerText.toLowerCase() != "-") {
-        if (filename.toLowerCase().includes(chosen_location.innerText.toLowerCase())) {
-            container.removeAttribute("hidden");
-        } else {
-            container.setAttribute("hidden", true);
-        }
-    } else {
-        container.removeAttribute("hidden");
-    }
-}
+function showOverlayImage() {
+    const imageData = currentFilteredImages[currentImageIndex];
 
-function filtering(filename_date, filename_location, container, filename) {
-    container.setAttribute("hidden", true);
-    if (date_lowest.value != "" || date_highest.value != "") {
-        if (filename_date != "Geen datum") {
-            if (date_lowest.value == "" && date_highest.value != "") {
-                if (filename_date <= Number(date_highest.value)) {
-                    filter_part(filename, container);
-                } else {
-                    container.setAttribute("hidden", true);
-                }
-            } else if (date_lowest.value != "" && date_highest.value == "") {
-                if (filename_date >= Number(date_lowest.value)) {
-                    filter_part(filename, container);
-                } else {
-                    container.setAttribute("hidden", true);
-                }
-            } else if (date_lowest.value != "" && date_highest.value != "") {
-                if (filename_date >= Number(date_lowest.value) && filename_date <= Number(date_highest.value)) {
-                    filter_part(filename, container);
-                } else {
-                    container.setAttribute("hidden", true);
-                }
-            }
-        } else {
-            container.setAttribute("hidden", true);
-        }
-    } else if (chosen_location.innerText.toLowerCase() != "-") {
-        if (filename.toLowerCase().includes(chosen_location.innerText.toLowerCase())) {
-            container.removeAttribute("hidden");
-        } else {
-            container.setAttribute("hidden", true);
-        }
-    } else {
-        container.removeAttribute("hidden");
-    }
-    if (check1.checked) {
-        if (filename_date == "Geen datum" || filename_location == "Geen locatie") {
-            container.removeAttribute("hidden");
-        }
-    }
-    if (check3.checked) {
-        if (!filename.toLowerCase().includes("kaart")) {
-            container.setAttribute("hidden", true);
-        }
-    }
-    if (filename_date != "Geen datum" && filename_location != "Geen locatie" && check1.checked) {
-        const lowName = filename.toLowerCase();
-        const lowInput = input.value.toLowerCase();
-        if (!lowName.includes(lowInput)) {
-            container.setAttribute("hidden", true);
-        }
-    }
+    overlay.style.display = "block";
+    overlay_image.src = imageData.path;
+    title.innerText = imageData.filename.slice(0, -4);
+    date.innerText = imageData.date_correct;
+    locations.innerText = imageData.location;
 }
 
 function createPageIcons(images) {
@@ -366,13 +333,11 @@ function createPageIcons(images) {
     function addButton(page) {
         const btn = document.createElement("button");
         btn.textContent = page;
-
         btn.addEventListener("click", () => {
             currentPage = page;
             createFilteredImages(images, currentPage);
             createPageIcons(images);
         });
-
         page_icons.appendChild(btn);
     }
 
@@ -383,19 +348,15 @@ function createPageIcons(images) {
     }
 
     addButton(1);
-
     if (currentPage > 3) {
         addDots();
     }
-
     for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
         addButton(i);
     }
-
     if (currentPage < totalPages - 2) {
         addDots();
     }
-
     if (totalPages > 1) {
         addButton(totalPages);
     }
