@@ -53,7 +53,7 @@ function fillRow(fotos, rowId) {
         inverted_bar_img.src = "Assets/Image/Inverted_bar_image_" + amount + ".png";
         inverted_bar_img.alt = "inverted bar img";
 
-        const choice = Math.floor(Math.random() * 4);
+        const choice = Math.floor(Math.random() * 5);
         console.log(choice);
 
         li.appendChild(img);

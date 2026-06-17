@@ -95,13 +95,15 @@
 						</ul>
 					</li>
 					<li>
-						<button>
+						<button id="filter_invert_btn">
 							<img
+								id="filter_normal"
 								class="sort_icon"
 								src="../Assets/SVG/sort-from-top-to-bottom-svgrepo-com.svg"
 								alt="Filter"
 							/>
 							<img
+								id="filter_inverted"
 								hidden
 								class="sort_icon"
 								src="../Assets/SVG/sort-from-bottom-to-top-svgrepo-com.svg"
@@ -249,7 +251,7 @@
 				</ul>
 			</section>
 			<ul class="beeldbank_scroll">
-				<button class="arrow">
+				<button id="left_page" class="arrow">
 					<img
 						class="sort_icon"
 						id="lft"
@@ -257,14 +259,14 @@
 						alt="pijl links"
 					/>
 				</button>
-				<li class="beeldbank_scroll">
+				<li id="page_icons" class="beeldbank_scroll">
 					<button><p>1</p></button>
 					<button><p>2</p></button>
 					<button><p>...</p></button>
 					<button><p>599</p></button>
 					<button><p>600</p></button>
 				</li>
-				<button class="arrow">
+				<button id="right_page" class="arrow">
 					<img
 						class="sort_icon"
 						id="rgt"
