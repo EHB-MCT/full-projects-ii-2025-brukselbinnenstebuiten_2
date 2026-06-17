@@ -52,6 +52,7 @@ nav ul {
 }
 .flag {
 	width: 30px;
+	cursor: pointer;
 }
 
 .logo {
