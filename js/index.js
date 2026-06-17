@@ -77,7 +77,6 @@ let currentFilteredImages = [];
     });
 
     images.sort();
-    console.log(images);
     
     createFilteredImages(images, currentPage);
     createPageIcons(images);
