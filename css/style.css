@@ -480,4 +480,8 @@ button.dropdown_content_middle {
 		height: 25px;
 		width: 25px;
 	}
+
+	#title {
+		font-size: 24px;
+	}
 }
