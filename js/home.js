@@ -44,7 +44,7 @@ function fillRow(fotos, rowId) {
         const img = document.createElement("img");
 
         img.className = "main_row_img suggested_image";
-        img.src = "./" + imageData.path2;
+        img.src = imageData.path2;
         img.alt = imageData.filename;
 
         const inverted_bar_img = document.createElement("img");
