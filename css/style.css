@@ -359,6 +359,10 @@ button.dropdown_content_middle {
 		padding-right: 0;
 	}
 
+	.right_row {
+		margin: 0;
+	}
+
 	.random_image_text {
 		writing-mode: horizontal-tb;
 	}
