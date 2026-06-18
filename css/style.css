@@ -49,8 +49,7 @@ main {
 	display: flex;
 	flex-direction: row;
     justify-content: flex-start;
-	column-gap: 8px;
-	padding-left: 8px;
+	margin-right: 16px;
 	padding-bottom: 8px;
     overflow: hidden;
     position: relative;
@@ -186,7 +185,6 @@ ul.row {
 	display: block;
 	position: absolute;
 	bottom: 2px;
-
 	background-color: rgba(72, 72, 72, 0.6);
 	padding: 8px;
 	width: calc(100% - 16px);
