@@ -72,6 +72,8 @@ main {
 }
 
 .arrow_list button {
+	background-color: var(--primary);
+	color: var(--btn);
 	margin: 16px;
 	padding: 8px 12px;
 }
