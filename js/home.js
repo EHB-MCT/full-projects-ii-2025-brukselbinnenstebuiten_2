@@ -44,13 +44,13 @@ function fillRow(fotos, rowId) {
         const img = document.createElement("img");
 
         img.className = "main_row_img suggested_image";
-        img.src = imageData.path;
+        img.src = "./" + imageData.path;
         img.alt = imageData.filename;
 
         const inverted_bar_img = document.createElement("img");
 
         inverted_bar_img.className = "main_row_img";
-        inverted_bar_img.src = "./Assets/Image/Inverted_bar_image_" + amount + ".png";
+        inverted_bar_img.src = "Assets/Image/Inverted_bar_image_" + amount + ".png";
         inverted_bar_img.alt = "inverted bar img";
 
         const choice = Math.floor(Math.random() * 5);
@@ -82,3 +82,19 @@ function fillRow(fotos, rowId) {
     });
 
 }
+
+const carousel = document.querySelector(".right_row");
+
+document.getElementById("next").addEventListener("click", () => {
+    carousel.scrollBy({
+        left: carousel.clientWidth,
+        behavior: "smooth"
+    });
+});
+
+document.getElementById("prev").addEventListener("click", () => {
+    carousel.scrollBy({
+        left: -carousel.clientWidth,
+        behavior: "smooth"
+    });
+});
