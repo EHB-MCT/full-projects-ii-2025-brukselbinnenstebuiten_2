@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bruksel Beelden Bank - Home</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="../Assets/Image/BrukselBeeldenBank_logo.png"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<header>
+			<a href="../index.html" class="logo"
+				><img src="../Assets/Image/BrukselBeeldenBank_logo.png" alt="Logo"
+			/></a>
+			<input hidden type="checkbox" id="menu_toggle" />
+			<label hidden for="menu_toggle" class="menu_icon">☰</label>
+			<nav>
+				<ul>
+					<li>
+						<a href="../index.html">
+							<div class="nav-link">
+								<h2>Home</h2>
+							</div>
+						</a>
+					</li>
+					<li>
+						<div class="nav-link">
+							<h2>Bekijk collectie</h2>
+							<img
+								src="../Assets/Image/Underlining_collection.png"
+								alt="Underlining"
+								class="underlining underlining_collection"
+							/>
+						</div>
+					</li>
+					<li>
+						<ul class="flag_list">
+							<li>
+								<img
+									class="flag"
+									src="../Assets/SVG/flag-be-svgrepo-com.svg"
+									alt="Be flag icon"
+								/>
+							</li>
+							<li>
+								<img
+									class="flag"
+									src="../Assets/SVG/flag-wf-svgrepo-com.svg"
+									alt="Fr flag icon"
+								/>
+							</li>
+							<li>
+								<img
+									class="flag"
+									src="../Assets/SVG/flag-gb-svgrepo-com.svg"
+									alt="En flag icon"
+								/>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="top_bar">
+				<ul class="row">
+					<li class="searchbar">
+						<img
+							class="search-icon"
+							src="../Assets/SVG/Search.svg"
+							alt="Search icon"
+						/>
+						<input id="searchbar" type="text" placeholder="Zoeken" />
+					</li>
+					<li>
+						<button id="dropdown_button_sort" class="sorteren_dropdown row">
+							<h2 id="sort_box">Sorteren</h2>
+							<h2 class="dropdown_arrow">></h2>
+						</button>
+						<ul id="dropdown_content_sort" class="dropdown_content">
+							<li>
+								<button id="sort_1_button" class="dropdown_content_first">
+									<h2 id="sort_1">Datum</h2>
+								</button>
+							</li>
+							<li>
+								<button id="sort_2_button" class="dropdown_content_last">
+									<h2 id="sort_2">A-Z</h2>
+								</button>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button id="filter_invert_btn">
+							<img
+								id="filter_normal"
+								class="sort_icon"
+								src="../Assets/SVG/sort-from-top-to-bottom-svgrepo-com.svg"
+								alt="Filter"
+							/>
+							<img
+								id="filter_inverted"
+								hidden
+								class="sort_icon"
+								src="../Assets/SVG/sort-from-bottom-to-top-svgrepo-com.svg"
+								alt="Filter-inverted"
+							/>
+						</button>
+					</li>
+				</ul>
+				<ul class="filter_container">
+					<h2>Filter</h2>
+					<ul class="filter_row">
+						<li class="row">
+							<p>Locaties:</p>
+							<section class="loco-dropdown">
+								<button
+									id="dropdown_button_location"
+									class="locaties_dropdown row"
+								>
+									<h2 id="dropdown-grijs">-</h2>
+									<h2 class="dropdown_arrow">></h2>
+								</button>
+								<ul id="dropdown_content_location" class="dropdown_content">
+									<li>
+										<button
+											id="location_geen_button"
+											class="dropdown_content_first"
+										>
+											<h2 id="location_none">-</h2>
+										</button>
+									</li>
+									<li>
+										<button
+											id="location_1_button"
+											class="dropdown_content_middle"
+										>
+											<h2 id="location_1">Noordwijk</h2>
+										</button>
+									</li>
+									<li>
+										<button
+											id="location_2_button"
+											class="dropdown_content_middle"
+										>
+											<h2 id="location_2">Schaarbeek</h2>
+										</button>
+									</li>
+									<li>
+										<button id="location_3_button" class="dropdown_content_last">
+											<h2 id="location_3">St-Gillis</h2>
+										</button>
+									</li>
+								</ul>
+							</section>
+						</li>
+						<li class="row">
+							<p>Datum:</p>
+							<input id="date_lowest" class="typ" type="text" placeholder="1990" maxlength="4" minlength="4"/>
+							<p>tot</p>
+							<input id="date_highest" class="typ" type="text" placeholder="2006" maxlength="4" minlength="4"/>
+						</li>
+						<li class="row">
+						<input class="checkbox" type="checkbox" name="check1" id="check1"/>	
+						<label for="check1">Toon foto's zonder datum of locatie</label>
+						</li>
+						<li class="row">
+							<input
+								class="checkbox"
+								type="checkbox"
+								name="check2"
+								id="check3"
+							/>
+							<label for="check3">Toon enkel landkaarten</label>
+						</li>
+					</ul>
+				</ul>
+			</section>
+			<ul id="image_list">
+				<li class="filtered_image_container">
+					<img
+						class="filtered_image"
+						src="../Assets/Image/Test_image.jpg"
+						alt="Filtered image"
+					/>
+					<p id="filtered_image_txt" hidden>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+						asperiores?
+					</p>
+				</li>
+			</ul>
+			<section id="overlay">
+				<ul class="overlay">
+					<li>
+						<button id="left_arrow" class="arrow">
+							<img
+								class="sort_icon"
+								id="lft"
+								src="../Assets/SVG/svgexport-6.svg"
+								alt="pijl links"
+							/>
+						</button>
+					</li>
+					<li class="overlay-image">
+						<img
+							id="overlay_image"
+							src="../Assets/Image/Test_image.jpg"
+							alt=""
+						/>
+					</li>
+					<li>
+						<button id="right_arrow" class="arrow">
+							<img
+								class="sort_icon"
+								id="rgt"
+								src="../Assets/SVG/svgexport-7.svg"
+								alt="pijl rechts"
+							/>
+						</button>
+					</li>
+					<li class="info_panel_container">
+						<ul class="info-panel">
+							<li class="top-bar">
+								<img
+									id="cross"
+									class="cross"
+									src="../Assets/SVG/cross-svgrepo-com.svg"
+									alt="cross icon"
+								/>
+							</li>
+							<h1 id="title">WTC III, Bouw</h1>
+							<li class="meta">
+								<div class="meta"><img class="aga" src="../Assets/SVG/svgexport-14.svg" alt="agenda icon"><p id="date">1983</p></div>
+								<div class="meta"><img class="loca" src="../Assets/SVG/location-pin-svgrepo-com.svg" alt="locatie icon"><p id="location">Noordwijk</p></div>
+							</li>
+							<p>
+								Heeft u nog vragen? U bent altijd welkom op locatie voor meer
+								informatie.
+							</p>
+							<p>+00 32 2 218 38 78</p>
+							<li class="buttons">
+								<button id="back" class="back">Terug naar collectie</button>
+								<a href="../index.html"><button class="full_width">Terug naar home</button></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<ul class="beeldbank_scroll">
+				<button id="left_page" class="arrow">
+					<img
+						class="sort_icon"
+						id="lft"
+						src="../Assets/SVG/svgexport-6.svg"
+						alt="pijl links"
+					/>
+				</button>
+				<li id="page_icons" class="beeldbank_scroll">
+					<button><p>1</p></button>
+					<button><p>2</p></button>
+					<button><p>...</p></button>
+					<button><p>599</p></button>
+					<button><p>600</p></button>
+				</li>
+				<button id="right_page" class="arrow">
+					<img
+						class="sort_icon"
+						id="rgt"
+						src="../Assets/SVG/svgexport-7.svg"
+						alt="pijl rechts"
+					/>
+				</button>
+			</ul>
+		</main>
+		<footer>
+			<ul class="footer_center_row_social">
+				<li class="footer_social">
+					<a href="https://www.facebook.com/Brukselbinnenstebuiten" target="_blank">
+						<img src="../Assets/SVG/facebook-svgrepo-com.svg" alt="Facebook" />
+					</a>
+				</li>
+				<li class="footer_social">
+					<a href="https://www.instagram.com/zichtopstad/" target="_blank">
+						<img src="../Assets/SVG/SVG Repo Instagram.svg" alt="Instagram icon" />
+					</a>
+				</li>
+				<li class="footer_social">
+					<a href="https://www.linkedin.com/company/brukselbinnenstebuiten-stapstad/?viewAsMember=true" target="_blank">
+						<img src="../Assets/SVG/linkedin-svgrepo-com.svg" alt="Twitter icon" />
+					</a>
+				</li>
+			</ul>
+			<p>
+				Heeft u nog vragen? U bent altijd welkom op locatie voor meer
+				informatie.
+			</p>
+			<p>Brukselbinnenstebuiten, Hopstraat 47 (1), 1000 Brussel (België)</p>
+			<ul class="footer_center_row">
+				<li class="footer_row">
+					<img
+						class="footer_icon"
+						src="../Assets/SVG/telephone-svgrepo-com.svg"
+						alt="Telephone icon"
+					/>
+					<p>+00 32 2 218 38 78</p>
+				</li>
+				<li class="footer_row">
+					<img
+						class="footer_icon"
+						src="../Assets/SVG/mail-alt-svgrepo-com.svg"
+						alt="Email icon"
+					/>
+					<p>​onthaal@brukselbinnenstebuiten.be​</p>
+				</li>
+			</ul>
+		</footer>
+		<script src="../js/index.js"></script>
+	</body>
+</html>

@@ -1,11 +1,455 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bruksel Beelden Bank - Home</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="Assets/Image/BrukselBeeldenBank_logo.png"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<header>
+			<a href="index.html" class="logo"
+				><img src="Assets/Image/BrukselBeeldenBank_logo.png" alt="Logo"
+			/></a>
+			<input hidden type="checkbox" id="menu_toggle" />
+			<label hidden for="menu_toggle" class="menu_icon">☰</label>
+			<nav>
+				<ul>
+					<li>
+						<div class="nav-link">
+							<h2>Home</h2>
+							<img
+								src="Assets/Image/Underlining_home.png"
+								alt="Underlining"
+								class="underlining"
+							/>
+						</div>
+					</li>
+					<li>
+						<a href="Pages/Collection.html">
+							<div class="nav-link">
+								<h2>Bekijk collectie</h2>
+							</div>
+						</a>
+					</li>
+					<li>
+						<ul class="flag_list">
+							<li>
+								<img
+									class="flag"
+									src="Assets/SVG/flag-be-svgrepo-com.svg"
+									alt="Be flag icon"
+								/>
+							</li>
+							<li>
+								<img
+									class="flag"
+									src="Assets/SVG/flag-wf-svgrepo-com.svg"
+									alt="Fr flag icon"
+								/>
+							</li>
+							<li>
+								<img
+									class="flag"
+									src="Assets/SVG/flag-gb-svgrepo-com.svg"
+									alt="En flag icon"
+								/>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<ul class="right_row">
+					<li>
+						<p class="random_image_text">
+							Kerk & stadhuis Schaarbeek <br />
+							18 okt 2007
+						</p>
 
-<head>
-  <link href="css/reset.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
-</head>
-<body>
+						<div class="random_image_container">
+							<img
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image"
+								class="random_image"
+							/>
+						</div>
+					</li>
 
+					<li>
+						<p class="random_image_text">
+							Etterbeek, Kaart Ferraris 1777<br />
+							1777
+						</p>
 
-  <script src="js/index.js"></script>
-</body>
+						<div class="random_image_container">
+							<img
+								src="Assets/Beeldbank/Etterbeek, Kaart Ferraris 1777 kopie 3.jpg"
+								alt="Random image"
+								class="random_image"
+							/>
+						</div>
+					</li>
+
+					<li>
+						<p class="random_image_text">
+							Brussel Jonction , Jonctionwerken <br />
+							1949
+						</p>
+
+						<div class="random_image_container">
+							<img
+								src="Assets/Beeldbank/Bxl, Jonction, Grondwetpl, Jonctionwerken +-1949.jpg"
+								alt="Random image"
+								class="random_image"
+							/>
+						</div>
+					</li>
+					<li>
+						<p class="random_image_text">
+							Noordwijk BeschilderdeWerfpanelen <br />
+							2006
+						</p>
+
+						<div class="random_image_container">
+							<img
+								src="Assets/Image/Noordwijk, BeschilderdeWerfpanelen 2006.jpg"
+								alt="Random image"
+								class="random_image"
+							/>
+						</div>
+					</li>
+					<li>
+						<p class="random_image_text">
+							Schaarbeek OudSchaarbeek, cite_l'Olivier <br />
+							2002
+						</p>
+
+						<div class="random_image_container">
+							<img
+								src="Assets/Image/Schaarbeek, OudSchaarbeek, Cite_l'Olivier 2002.jpg"
+								alt="Random image"
+								class="random_image"
+							/>
+						</div>
+					</li>
+				</ul>
+				<ul class="arrow_list">
+					<button id="prev">❮</button>
+					<button id="next">❯</button>
+				</ul>
+				<ul class="button_center">
+					<li>
+						<a href="Pages/Collection.html">
+							<button>
+								<h3>Bekijk onze collectie</h3>
+							</button>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<ul>
+				<li>
+					<button id="suggestion1">Noordwijk</button>
+					<ul class="main_row" id="main_row_1">
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_1.png"
+								alt="Inverted bar image 1"
+							/>
+							<img
+								class="marker-overlay"
+								src="Assets/Image/Vector5.png"
+								alt=" overlay square"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_2.png"
+								alt="Inverted bar image 2"
+							/>
+							<img
+								class="marker-overlay-arrow"
+								src="Assets/Image/Group 1.png"
+								alt="overlay arrow"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_3.png"
+								alt="Inverted bar image 3"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_4.png"
+								alt="Inverted bar image 4"
+							/>
+							<img
+								class="marker-overlay"
+								src="Assets/Image/Vector5.png"
+								alt=" overlay square"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_5.png"
+								alt="Inverted bar image 5"
+							/>
+						</li>
+					</ul>
+					<ul class="inverted_bar">
+						<li class="inverted_bar_text"><h2>Noordwijk</h2></li>
+						<li class="inverted_bar_text"><h2>Noordwijk</h2></li>
+						<li class="inverted_bar_text"><h2>Noordwijk</h2></li>
+					</ul>
+				</li>
+				<li>
+					<button id="suggestion2">Schaarbeek</button>
+					<ul class="main_row" id="main_row_2">
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_1.png"
+								alt="Inverted bar image 1"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_2.png"
+								alt="Inverted bar image 2"
+							/>
+							<img
+								class="marker-overlay"
+								src="Assets/Image/Vector5.png"
+								alt=" overlay square"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_3.png"
+								alt="Inverted bar image 3"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_4.png"
+								alt="Inverted bar image 4"
+							/>
+							<img
+								class="marker-overlay-arrow"
+								src="Assets/Image/Group 1.png"
+								alt="overlay arrow"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_5.png"
+								alt="Inverted bar image 5"
+							/>
+							<img
+								class="marker-overlay"
+								src="Assets/Image/Vector 1.png"
+								alt=" overlay circle"
+							/>
+						</li>
+					</ul>
+					<ul class="inverted_bar">
+						<li class="inverted_bar_text"><h2>Schaarbeek</h2></li>
+						<li class="inverted_bar_text"><h2>Schaarbeek</h2></li>
+						<li class="inverted_bar_text"><h2>Schaarbeek</h2></li>
+					</ul>
+				</li>
+				<li>
+					<button id="suggestion3">1994</button>
+					<ul class="main_row" id="main_row_3">
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_1.png"
+								alt="Inverted bar image 1"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_2.png"
+								alt="Inverted bar image 2"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_3.png"
+								alt="Inverted bar image 3"
+							/>
+							<img
+								class="marker-overlay"
+								src="Assets/Image/Vector5.png"
+								alt=" overlay square"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_4.png"
+								alt="Inverted bar image 4"
+							/>
+						</li>
+						<li>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Test_image.jpg"
+								alt="Random image from collection"
+							/>
+							<img
+								class="main_row_img"
+								src="Assets/Image/Inverted_bar_image_5.png"
+								alt="Inverted bar image 5"
+							/>
+							<img
+								class="marker-overlay-arrow"
+								src="Assets/Image/Group 1.png"
+								alt="overlay arrow"
+							/>
+						</li>
+					</ul>
+					<ul class="inverted_bar">
+						<li class="inverted_bar_text"><h2>1981</h2></li>
+						<li class="inverted_bar_text"><h2>1981</h2></li>
+						<li class="inverted_bar_text"><h2>1981</h2></li>
+					</ul>
+				</li>
+			</ul>
+		</main>
+		<footer>
+			<ul class="footer_center_row_social">
+				<li class="footer_social">
+					<a href="https://www.facebook.com/Brukselbinnenstebuiten" target="_blank">
+						<img src="Assets/SVG/facebook-svgrepo-com.svg" alt="Facebook" />
+					</a>
+				</li>
+				<li class="footer_social">
+					<a href="https://www.instagram.com/zichtopstad/" target="_blank">
+						<img src="Assets/SVG/SVG Repo Instagram.svg" alt="Instagram icon" />
+					</a>
+				</li>
+				<li class="footer_social">
+					<a href="https://www.linkedin.com/company/brukselbinnenstebuiten-stapstad/?viewAsMember=true" target="_blank">
+						<img src="Assets/SVG/linkedin-svgrepo-com.svg" alt="Twitter icon" />
+					</a>
+				</li>
+			</ul>
+			<p>
+				Heeft u nog vragen? U bent altijd welkom op locatie voor meer
+				informatie.
+			</p>
+			<p>Brukselbinnenstebuiten, Hopstraat 47 (1), 1000 Brussel (België)</p>
+			<ul class="footer_center_row">
+				<li class="footer_row">
+					<img
+						class="footer_icon"
+						src="Assets/SVG/telephone-svgrepo-com.svg"
+						alt="Telephone icon"
+					/>
+					<p>+00 32 2 218 38 78</p>
+				</li>
+				<li class="footer_row">
+					<img
+						class="footer_icon"
+						src="Assets/SVG/mail-alt-svgrepo-com.svg"
+						alt="Email icon"
+					/>
+					<p>​onthaal@brukselbinnenstebuiten.be​</p>
+				</li>
+			</ul>
+		</footer>
+		<script src="js/home.js"></script>
+	</body>
+</html>

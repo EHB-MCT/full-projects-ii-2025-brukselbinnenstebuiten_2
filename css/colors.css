@@ -1,0 +1,13 @@
+:root{
+    --primary: #000;
+    --nav: #7F1E04;
+    --btn: #B1563D;
+    --btn-hover: #000;
+    --btn-txt: #000;
+    --special-txt: #fff;
+    --txt: #b0553d;
+    --disabled-txt: #a0a0a0;
+    --inverted:#626262;
+    --design-bar: #231818;
+    --unordered: #CA6448;
+}
