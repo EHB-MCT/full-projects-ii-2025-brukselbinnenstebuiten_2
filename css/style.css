@@ -50,7 +50,8 @@ main {
 	flex-direction: row;
     justify-content: flex-start;
 	column-gap: 8px;
-	margin: 8px;
+	padding-left: 8px;
+	padding-bottom: 8px;
     overflow: hidden;
     position: relative;
 	max-height: 500px;
@@ -59,6 +60,21 @@ main {
 .right_row > li {
 	justify-content: end;
     flex: 0 0 100%;
+}
+
+.arrow_list {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 40%;
+	width: 85%;
+	z-index: 10;
+	margin-left: 11%;
+}
+
+.arrow_list button {
+	margin: 16px;
+	padding: 8px 12px;
 }
 
 .main_row {
@@ -89,6 +105,7 @@ main {
 
 .random_image_container {
 	overflow: hidden;
+	height: 100%;
 	width: 90%;
 }
 
@@ -346,6 +363,13 @@ button.dropdown_content_middle {
 
 	.random_image_text {
 		writing-mode: horizontal-tb;
+	}
+
+	.arrow_list {
+		top: unset;
+		margin-left: 0;
+		margin-top: -60px;
+		width: 95%;
 	}
 
 	.random_image_container {
