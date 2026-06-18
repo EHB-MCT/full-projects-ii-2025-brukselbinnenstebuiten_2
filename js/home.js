@@ -82,19 +82,3 @@ function fillRow(fotos, rowId) {
     });
 
 }
-
-const carousel = document.querySelector(".right_row");
-
-document.getElementById("next").addEventListener("click", () => {
-    carousel.scrollBy({
-        left: carousel.clientWidth,
-        behavior: "smooth"
-    });
-});
-
-document.getElementById("prev").addEventListener("click", () => {
-    carousel.scrollBy({
-        left: -carousel.clientWidth,
-        behavior: "smooth"
-    });
-});
