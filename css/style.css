@@ -48,9 +48,17 @@ main {
 .right_row {
 	display: flex;
 	flex-direction: row;
-	justify-content: right;
+    justify-content: flex-start;
 	column-gap: 8px;
-	padding-right: 16px;
+	margin: 8px;
+    overflow: hidden;
+    position: relative;
+	max-height: 500px;
+}
+
+.right_row > li {
+	justify-content: end;
+    flex: 0 0 100%;
 }
 
 .main_row {
@@ -82,11 +90,6 @@ main {
 .random_image_container {
 	overflow: hidden;
 	width: 90%;
-}
-
-.random_image_list {
-	max-height: 500px;
-	padding-bottom: 16px;
 }
 
 .inverted_bar {
@@ -333,7 +336,7 @@ button.dropdown_content_middle {
 		flex-wrap: wrap;
 	}
 
-	.right_row {
+	.right_row li {
 		flex-direction: column-reverse;
 		align-items: center;
 		padding-bottom: 16px;
