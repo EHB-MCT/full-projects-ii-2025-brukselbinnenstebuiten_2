@@ -3,15 +3,15 @@ const suggestion2 = document.getElementById("suggestion2");
 const suggestion3 = document.getElementById("suggestion3");
 
 suggestion1.addEventListener("click", () => {
-    window.location.href = `pages/Collection.html?gegeven=${encodeURIComponent(suggestion1.innerText)}`;
+    window.location.href = `Pages/Collection.html?gegeven=${encodeURIComponent(suggestion1.innerText)}`;
 });
 
 suggestion2.addEventListener("click", () => {
-    window.location.href = `pages/Collection.html?gegeven=${encodeURIComponent(suggestion2.innerText)}`;
+    window.location.href = `Pages/Collection.html?gegeven=${encodeURIComponent(suggestion2.innerText)}`;
 });
 
 suggestion3.addEventListener("click", () => {
-    window.location.href = `pages/Collection.html?gegeven=${encodeURIComponent(suggestion3.innerText)}`;
+    window.location.href = `Pages/Collection.html?gegeven=${encodeURIComponent(suggestion3.innerText)}`;
 });
 
 (async () => {
