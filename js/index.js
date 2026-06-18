@@ -49,6 +49,9 @@ let currentFilteredImages = [];
     const imagesRes = await fetch("../js/beeldbank.json");
     if (!imagesRes.ok) throw new Error(`Failed to fetch images: ${imagesRes.status}`);
     const images = await imagesRes.json();
+    
+    input.value = gegeven;
+    input.dispatchEvent(new Event("input"));
 
     images.forEach(imageData => {
         let filename_date = "Geen datum";
@@ -96,9 +99,6 @@ let currentFilteredImages = [];
         }
         showOverlayImage();
     });
-
-    input.value = gegeven;
-    input.dispatchEvent(new Event("input"));
     
     input.addEventListener("input", () => {
         currentPage = 1;
