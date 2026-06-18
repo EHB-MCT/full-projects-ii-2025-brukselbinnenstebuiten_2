@@ -293,7 +293,7 @@ function createFilteredImages(images, page = 1) {
 
         const image = document.createElement("img");
         image.className = "filtered_image";
-        image.src = imageData.path;
+        image.src = "." + imageData.path;
         image.alt = "Filtered image";
 
         const text = document.createElement("p");
@@ -317,7 +317,7 @@ function showOverlayImage() {
     const imageData = currentFilteredImages[currentImageIndex];
 
     overlay.style.display = "block";
-    overlay_image.src = imageData.path;
+    overlay_image.src = "." + imageData.path;
     title.innerText = imageData.filename.slice(0, -4);
     date.innerText = imageData.date_correct;
     locations.innerText = imageData.location;

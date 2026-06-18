@@ -17,8 +17,7 @@ fs.readdir(folderPath, (err, files) => {
         )
         .map(file => ({
             filename: file,
-            path: `../Assets/Beeldbank/${file}`,
-            path2: `Assets/Beeldbank/${file}`
+            path: `./Assets/Beeldbank/${file}`,
         }));
 
     fs.writeFileSync(
